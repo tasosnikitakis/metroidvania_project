@@ -5,11 +5,11 @@
   "rooms": [
     {
       "id": "room-001",
-      "name": "Test Hall",
+      "name": "The Lamplighter's Climb",
       "x": 0,
       "y": 0,
-      "w": 110,
-      "h": 34
+      "w": 150,
+      "h": 46
     }
   ]
 }

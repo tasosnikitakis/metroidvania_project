@@ -23,6 +23,8 @@ export class HeroView {
   private sy = 1;
   private wallDustTimer = 0;
   private afterImageTimer = 0;
+  /** Animation name -> seconds. Shared with the animator, so live rig edits can update it in place. */
+  private durations: Record<string, number> = {};
   /** Last drawn position (interpolated), for effects. */
   x = 0;
   y = 0;
@@ -50,6 +52,7 @@ export class HeroView {
     }
     this.view = view;
     this.view.setDepth(DEPTH.PLAYER);
+    this.durations = durations;
     this.animator = new HeroAnimator(view, durations);
     this.afterImages = new AfterImages(scene);
     // Footstep puffs, if the run animation carries "step"/"foot" events.
@@ -93,6 +96,24 @@ export class HeroView {
         this.afterImageTimer = 0;
         break;
     }
+  }
+
+  /**
+   * The Game Editor sent edited animations: swap them into the live rig (no rebuild, the
+   * current animation keeps playing). Returns false when there is no real rig to update.
+   */
+  setRigData(rig: RigData): boolean {
+    if (!this.usingRig || typeof this.view.setRigData !== 'function') return false;
+    if (!rig || !Array.isArray(rig.bones) || !Array.isArray(rig.slots) || !rig.animations) return false;
+    try {
+      this.view.setRigData(rig);
+    } catch (err) {
+      console.warn('[hero] could not apply the live rig from the editor.', err);
+      return false;
+    }
+    for (const name of Object.keys(this.durations)) delete this.durations[name];
+    for (const [name, anim] of Object.entries(rig.animations)) this.durations[name] = anim.duration;
+    return true;
   }
 
   private setSquash(sx: number, sy: number): void {

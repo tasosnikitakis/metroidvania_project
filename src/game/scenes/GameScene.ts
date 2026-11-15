@@ -13,7 +13,7 @@
  * display.
  */
 import Phaser from 'phaser';
-import type { GameConfig } from '../../shared/types';
+import type { GameConfig, RigData } from '../../shared/types';
 import { CameraRig } from '../camera/cameraRig';
 import { DEPTH, FADE_IN_TIME, FADE_OUT_TIME, SIM_HZ } from '../constants';
 import {
@@ -80,6 +80,8 @@ export class GameScene extends Phaser.Scene {
   private config!: GameConfig;
   /** True once the Game Editor has pushed a live config (kept across reloads). */
   private hasLiveConfig = false;
+  /** Hero rig pushed live by the Game Editor's Animation tab (kept across reloads, like the live config). */
+  private liveRig: RigData | null = null;
   private grid!: CollisionGrid;
   private roomView: RoomView | null = null;
   private hero: HeroView | null = null;
@@ -129,6 +131,7 @@ export class GameScene extends Phaser.Scene {
     this.bridge = new EditorBridge({
       onConfig: (cfg) => this.applyLiveConfig(cfg),
       onReload: () => this.requestReload(),
+      onRig: (rig) => this.applyLiveRig(rig),
     });
 
     this.events.once(Phaser.Scenes.Events.SHUTDOWN, () => {
@@ -196,7 +199,7 @@ export class GameScene extends Phaser.Scene {
 
     // (Re)create the hero when needed: first time, or after a content reload.
     if (!this.hero) {
-      this.hero = new HeroView(this, content.rig, this.rigModule, this.dust, this.config.player.width, this.config.player.height);
+      this.hero = new HeroView(this, this.liveRig ?? content.rig, this.rigModule, this.dust, this.config.player.width, this.config.player.height);
     }
 
     // Where does the hero start in this room?
@@ -249,6 +252,11 @@ export class GameScene extends Phaser.Scene {
   private applyLiveConfig(incoming: GameConfig): void {
     this.config = mergeConfig(incoming, this.config ?? undefined);
     this.hasLiveConfig = true;
+  }
+
+  /** Game Editor pushed edited hero animations: hot-swap them, no reload. */
+  private applyLiveRig(rig: RigData): void {
+    if (this.hero?.setRigData(rig)) this.liveRig = rig;
   }
 
   /** World Editor saved something: rebuild the room in place. */

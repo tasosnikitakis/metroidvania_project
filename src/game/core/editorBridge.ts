@@ -9,9 +9,10 @@
  * BroadcastChannel 'metroidvania' (any tab/iframe on the same site):
  *   -> { type: 'config', config: GameConfig }   apply new tuning immediately, no reload
  *   -> { type: 'reload' }                       re-fetch content and rebuild the current room
+ *   -> { type: 'rig', rig: RigData }             hot-swap the hero's animations (Game Editor, Animation tab)
  *   <- { type: 'ready' }                        posted by the game once it is running
  */
-import type { GameConfig } from '../../shared/types';
+import type { GameConfig, RigData } from '../../shared/types';
 
 export const CHANNEL_NAME = 'metroidvania';
 
@@ -42,6 +43,8 @@ export function readStartParams(search: string = location.search): StartParams {
 export interface BridgeHandlers {
   onConfig(config: GameConfig): void;
   onReload(): void;
+  /** Optional: the Game Editor sent edited hero animations to preview without saving. */
+  onRig?(rig: RigData): void;
 }
 
 export class EditorBridge {
@@ -55,6 +58,7 @@ export class EditorBridge {
       if (!msg || typeof msg !== 'object') return;
       if (msg.type === 'config' && msg.config && typeof msg.config === 'object') handlers.onConfig(msg.config as GameConfig);
       else if (msg.type === 'reload') handlers.onReload();
+      else if (msg.type === 'rig' && msg.rig && typeof msg.rig === 'object') handlers.onRig?.(msg.rig as RigData);
     };
   }
 

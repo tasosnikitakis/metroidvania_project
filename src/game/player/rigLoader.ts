@@ -20,6 +20,8 @@ export interface RigViewLike {
   play(name: string, opts?: { mix?: number; restart?: boolean; speed?: number }): void;
   update(dtSeconds: number): void;
   onEvent(cb: (name: string, anim: string) => void): void;
+  /** Swap in edited rig data without rebuilding (the real RigView has this; the placeholder does not). */
+  setRigData?(rig: RigData): void;
   destroy(): void;
 }
 
