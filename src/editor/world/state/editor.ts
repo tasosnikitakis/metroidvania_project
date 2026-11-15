@@ -259,14 +259,14 @@ export class Editor {
   armDecor(key: string | null): void {
     this.decorArmed = key;
     this.tool = 'decor';
-    if (key) this.selection = null;
+    if (key || this.selection?.kind !== 'decor') this.selection = null;
     this.events.emit('palette', 'ui', 'render', 'selection');
   }
 
   armEntity(type: string | null): void {
     this.entityArmed = type;
     this.tool = 'entity';
-    if (type) this.selection = null;
+    if (type || this.selection?.kind !== 'entity') this.selection = null;
     this.events.emit('palette', 'ui', 'render', 'selection');
   }
 
