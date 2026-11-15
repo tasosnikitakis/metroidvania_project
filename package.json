@@ -1,0 +1,31 @@
+{
+  "name": "metroidvania-project",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "concurrently -k -n server,vite -c magenta,cyan \"tsx watch server/index.ts\" \"vite\"",
+    "build": "vite build",
+    "start": "NODE_ENV=production tsx server/index.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "art": "node tools/art/build.mjs"
+  },
+  "dependencies": {
+    "@fastify/static": "^10.1.11",
+    "fastify": "^5.12.8",
+    "phaser": "^4.2.1",
+    "tsx": "^4.23.15"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "concurrently": "^10.0.7",
+    "sharp": "^0.35.5",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.8",
+    "vitest": "^5.1.0"
+  }
+}
