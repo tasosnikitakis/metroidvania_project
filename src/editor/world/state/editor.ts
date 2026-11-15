@@ -204,6 +204,9 @@ export class Editor {
     // A selected lamp should not stay selected (and deletable!) while you are painting tiles.
     const keeps = tool === 'decor' ? 'decor' : tool === 'entity' ? 'entity' : tool === 'pan' || tool === 'play' ? this.selection?.kind : null;
     if (this.selection && this.selection.kind !== keeps) this.selection = null;
+    // Picking the Decor/Entity tool un-hides them, or you would be placing invisible things.
+    if (tool === 'decor') this.view.decor = true;
+    if (tool === 'entity') this.view.entities = true;
     this.events.emit('ui', 'render', 'selection', 'palette');
   }
 
@@ -259,6 +262,7 @@ export class Editor {
   armDecor(key: string | null): void {
     this.decorArmed = key;
     this.tool = 'decor';
+    this.view.decor = true;
     if (key || this.selection?.kind !== 'decor') this.selection = null;
     this.events.emit('palette', 'ui', 'render', 'selection');
   }
@@ -266,6 +270,7 @@ export class Editor {
   armEntity(type: string | null): void {
     this.entityArmed = type;
     this.tool = 'entity';
+    this.view.entities = true;
     if (type || this.selection?.kind !== 'entity') this.selection = null;
     this.events.emit('palette', 'ui', 'render', 'selection');
   }
@@ -321,7 +326,10 @@ export class Editor {
     if (!room) return null;
     const roomId = room.id;
     const tiles = room.layers[layer];
-    this.layerVisible[layer] = true;
+    if (!this.layerVisible[layer]) {
+      this.layerVisible[layer] = true; // never paint on a layer you cannot see
+      this.events.emit('ui');
+    }
     const builder = new PatchBuilder(tiles, (i) => this.onTiles(roomId, layer, i));
     let open = true;
     return {

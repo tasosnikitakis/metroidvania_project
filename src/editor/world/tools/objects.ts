@@ -411,34 +411,49 @@ export class EntityTool extends ObjectTool<EntityInstance> {
   }
 
   protected drawSelected(ctx: CanvasRenderingContext2D, e: EntityInstance): void {
+    this.drawExtent(ctx, e, true);
+  }
+
+  /** How far an entity reaches: a light's radius, a particle area's rectangle. */
+  private drawExtent(ctx: CanvasRenderingContext2D, e: EntityInstance, selected: boolean): void {
     const v = this.host.view;
     const color = entityType(e.type)?.color ?? '#fff';
     ctx.save();
     ctx.strokeStyle = color;
-    ctx.lineWidth = 1.5;
-    ctx.setLineDash([7, 5]);
+    ctx.lineWidth = selected ? 1.5 : 1;
+    ctx.setLineDash(selected ? [7, 5] : [3, 6]);
+    const fade = selected ? 1 : 0.4;
     if (e.type === 'light' && typeof e.props.radius === 'number') {
       const lightColor = typeof e.props.color === 'string' ? e.props.color : color;
       ctx.strokeStyle = lightColor;
       ctx.beginPath();
       ctx.arc(v.sx(e.x), v.sy(e.y), e.props.radius * v.zoom, 0, Math.PI * 2);
-      ctx.globalAlpha = 0.12;
-      ctx.fillStyle = lightColor;
-      ctx.fill();
-      ctx.globalAlpha = 1;
+      if (selected) {
+        ctx.globalAlpha = 0.12;
+        ctx.fillStyle = lightColor;
+        ctx.fill();
+      }
+      ctx.globalAlpha = fade;
       ctx.stroke();
     }
     if (e.type === 'particles' && typeof e.props.width === 'number' && typeof e.props.height === 'number') {
       const w = e.props.width * v.zoom;
       const h = e.props.height * v.zoom;
-      ctx.fillStyle = 'rgba(201,160,255,0.1)';
-      ctx.fillRect(v.sx(e.x) - w / 2, v.sy(e.y) - h / 2, w, h);
+      if (selected) {
+        ctx.fillStyle = 'rgba(201,160,255,0.1)';
+        ctx.fillRect(v.sx(e.x) - w / 2, v.sy(e.y) - h / 2, w, h);
+      }
+      ctx.globalAlpha = fade;
       ctx.strokeRect(v.sx(e.x) - w / 2, v.sy(e.y) - h / 2, w, h);
     }
     ctx.restore();
   }
 
   draw(ctx: CanvasRenderingContext2D, hover: PointerInfo | null): void {
+    // Faint outlines for every light / particle area, so you can see what they cover at a glance.
+    const room = this.host.editor.room;
+    const chosen = this.selectedIds();
+    if (room) for (const e of room.entities) if (!chosen.includes(e.id)) this.drawExtent(ctx, e, false);
     super.draw(ctx, hover);
     const v = this.host.view;
     for (const h of this.handles()) {
