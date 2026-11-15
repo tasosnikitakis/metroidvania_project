@@ -4,7 +4,7 @@ A gothic-fantasy cartoon metroidvania, built to be designed by a family. This
 is the **prototype stage**: one level, the hero (Wick, a small lamplighter),
 the environment, and two editors for shaping the game.
 
-![Opening screen](docs/screenshots/01-graveyard-gate.png)
+![Opening screen](docs/screenshots/01-graveyard-start.png)
 
 ## Quick start
 

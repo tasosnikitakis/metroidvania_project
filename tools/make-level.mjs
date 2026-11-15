@@ -350,8 +350,7 @@ const SHAFT_TOP = 23; // floor row at the top of the shaft = lower gallery floor
   archway(65, 66, GROUND, 3); // door from the hall
   fill(67, GROUND, 70, H - 1); // shaft floor
   fill(71, SHAFT_TOP, 81, H - 1); // right wall = the big block under the gallery
-  backFill(67, 25, 70, GROUND - 1);
-  ruin(67, 20, 70, 25, 5); // the wall behind crumbles away where the shaft opens to the sky
+  backFill(67, 21, 70, GROUND - 1); // the wall behind stops where the shaft opens to the sky
 
   plank(67, 70, 33, 'ledge'); // the rest ledge
   checkpoint(68.5, 33);
@@ -448,12 +447,13 @@ const UPPER = 19; // floor row of the upper gallery / library / first rooftop
   chandelier(78.9, 15, { scale: 0.9 });
   candelabra(79, SHAFT_TOP);
   decor('banner', 82.8, 15, { scale: 0.85 });
-  candelabra(82.7, UPPER, { scale: 0.9 }); // a light on the high ledge says "come up here"
+  candelabra(82.4, UPPER, { scale: 0.9 }); // a light on the high ledge says "come up here"
   decor('cobweb', 75, 15, { alpha: 0.8 });
   particles(79, 19, 'dust', 8, 8);
   // -- dressing: bramble crawl --
-  torch(85.4, 17.9);
-  torch(92.6, 17.9);
+  // (no torches here: a glow at head height would wash out the hero - soft lights instead)
+  light(85.2, 17.8, WARM, 150, 0.14, 0.2);
+  light(92.8, 17.8, WARM, 150, 0.14, 0.2);
   light(88.5, 18.8, RED, 200, 0.2, 0.3);
   particles(88.5, 18, 'embers', 5, 2);
   // -- dressing: library --
