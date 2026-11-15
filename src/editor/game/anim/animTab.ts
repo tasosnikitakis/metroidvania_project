@@ -516,8 +516,8 @@ export class AnimTab implements EditorTab {
         button('🗑', 'Delete the selected keys or event (Delete)', () => this.deleteSelection(), 'mini')),
       button('⚑ Event', 'Add a named moment (like "step" or "hit") at the playhead', () => void this.addEventHere()),
       h('span', { class: 'spacer' }),
-      toggleButton('⇕ Tall', 'Make the timeline taller (and the stage smaller)', false, (on) => { this.timeline.el.classList.toggle('tall', on); }),
-      toggleButton('All pictures', 'Also show rows for body-part pictures that have no see-through keys yet', false, (on) => { this.timeline.showAllSlots = on; this.timeline.rebuildRows(); this.timelineDirty = true; }));
+      toggleButton('⇕', 'Make the timeline taller (and the stage smaller)', false, (on) => { this.timeline.el.classList.toggle('tall', on); }),
+      toggleButton('🖼 All', 'Also show rows for body-part pictures that have no see-through keys yet', false, (on) => { this.timeline.showAllSlots = on; this.timeline.rebuildRows(); this.timelineDirty = true; }));
   }
 
   private keySelectedBone(): void {

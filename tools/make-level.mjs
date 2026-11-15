@@ -410,7 +410,7 @@ const SHAFT_TOP = 23; // floor row at the top of the shaft = lower gallery floor
 /* ---------------------------------------------------------------------- */
 /* SECTION 4 - GALLERY & LIBRARY             columns 71-109, indoors        */
 /* Teaches: the double jump (a ledge 4 tiles up - one jump is not enough),  */
-/* then the dash (a bramble trench under a low ceiling: jump, then dash).   */
+/* then the dash (a bramble trench in a low crawlway: hop, then dash).   */
 /* ---------------------------------------------------------------------- */
 const UPPER = 19; // floor row of the upper gallery / library / first rooftop
 {
@@ -425,10 +425,12 @@ const UPPER = 19; // floor row of the upper gallery / library / first rooftop
   fill(82, UPPER, 109, H - 1);
   checkpoint(83.5, UPPER);
 
-  // The bramble crawl: only 3 tiles of headroom, 5 tiles of brambles.
-  fill(84, 13, 94, 15); // low ceiling
-  backFill(84, 16, 94, UPPER - 1);
-  hazard(87, 91, UPPER, T.brambles);
+  // The bramble crawl: a passage only 2 tiles high with 4 tiles of brambles in the floor.
+  // The ceiling is too low for a real jump, so the ONLY way across is a little hop + DASH
+  // (checked with the real physics: no combination of jumps alone makes it).
+  fill(84, 13, 94, 16); // low ceiling
+  backFill(84, 17, 94, UPPER - 1);
+  hazard(87, 90, UPPER, T.brambles);
 
   // The library: a tall room again.
   fill(93, 9, 94, 12);
@@ -450,10 +452,10 @@ const UPPER = 19; // floor row of the upper gallery / library / first rooftop
   decor('cobweb', 75, 15, { alpha: 0.8 });
   particles(79, 19, 'dust', 8, 8);
   // -- dressing: bramble crawl --
-  torch(85.5, 17.3);
-  torch(92.5, 17.3);
-  light(89, 18.8, RED, 220, 0.2, 0.3);
-  particles(89, 17.8, 'embers', 6, 2.5);
+  torch(85.4, 17.9);
+  torch(92.6, 17.9);
+  light(88.5, 18.8, RED, 200, 0.2, 0.3);
+  particles(88.5, 18, 'embers', 5, 2);
   // -- dressing: library --
   decor('roseWindow', 100.5, 13.1, { scale: 1.25, alpha: 0.8 });
   light(100.5, 17, ROSE, 260, 0.14, 0.04); // rosy light spilling on the floor
