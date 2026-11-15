@@ -29,6 +29,38 @@ export class TileDrawer {
   }
 
   /**
+   * Smaller copies of the tileset (half size, quarter size, ...). Shrinking a
+   * detailed tile a lot in one go makes it shimmer; picking the copy closest to
+   * the size we need keeps bricks looking like bricks when zoomed out.
+   */
+  private mips: CanvasImageSource[] = [];
+  private mipsFor: HTMLImageElement | null = null;
+
+  private levels(img: HTMLImageElement): CanvasImageSource[] {
+    if (this.mipsFor !== img) {
+      this.mipsFor = img;
+      this.mips = [img];
+      let cell = this.cellPx;
+      let w = img.naturalWidth;
+      let h = img.naturalHeight;
+      let prev: CanvasImageSource = img;
+      // Halve while tile edges still land on whole pixels (so tiles never smear into each other).
+      while (cell % 2 === 0 && cell >= 8 && w % 2 === 0 && h % 2 === 0) {
+        cell /= 2; w /= 2; h /= 2;
+        const c = document.createElement('canvas');
+        c.width = w;
+        c.height = h;
+        const cx = c.getContext('2d')!;
+        cx.imageSmoothingEnabled = true;
+        cx.drawImage(prev, 0, 0, w, h);
+        this.mips.push(c);
+        prev = c;
+      }
+    }
+    return this.mips;
+  }
+
+  /**
    * Draw one tile at (dx,dy) with the given size, in whatever space the context is in.
    * `inset` trims the source by a fraction of a pixel to stop neighbouring atlas tiles bleeding in when smoothing.
    */
@@ -37,11 +69,15 @@ export class TileDrawer {
     const img = this.image;
     const ts = this.tileset();
     if (img) {
-      const cell = this.cellPx;
+      const full = this.cellPx;
       const col = (id - 1) % ts.columns;
       const row = Math.floor((id - 1) / ts.columns);
-      if ((row + 1) * cell <= img.naturalHeight + 0.5) {
-        ctx.drawImage(img, col * cell + inset, row * cell + inset, cell - inset * 2, cell - inset * 2, dx, dy, size, size);
+      if ((row + 1) * full <= img.naturalHeight + 0.5) {
+        const levels = this.levels(img);
+        let level = 0;
+        while (level + 1 < levels.length && full / 2 ** (level + 1) >= size) level++;
+        const cell = full / 2 ** level;
+        ctx.drawImage(levels[level], col * cell + inset, row * cell + inset, cell - inset * 2, cell - inset * 2, dx, dy, size, size);
         return;
       }
     }

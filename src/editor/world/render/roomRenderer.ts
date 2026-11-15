@@ -182,7 +182,7 @@ export class RoomRenderer {
       }
     }
 
-    if (ed.view.grid && TILE_SIZE * s >= 7 * dpr) {
+    if (ed.view.grid && TILE_SIZE * s >= 10 * dpr) {
       ctx.beginPath();
       for (let tx = tx0; tx <= tx1; tx++) {
         const x = px(tx) + 0.5;

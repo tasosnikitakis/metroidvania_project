@@ -20,9 +20,9 @@ const STYLE = `
   padding: 8px 18px; cursor: pointer; }
 .mv-hint { position: fixed; left: 50%; bottom: 22px; transform: translateX(-50%); z-index: 10;
   color: #e6e0f5; background: rgba(14, 12, 24, 0.55); border: 1px solid rgba(190, 170, 255, 0.18);
-  border-radius: 999px; padding: 7px 18px; font: 13px/1.4 Georgia, serif; letter-spacing: 0.04em;
-  white-space: pre; pointer-events: none; opacity: 0; transition: opacity 1.2s ease; max-width: 94vw;
-  overflow: hidden; text-overflow: ellipsis; }
+  border-radius: 18px; padding: 7px 18px; font: 13px/1.5 Georgia, serif; letter-spacing: 0.04em;
+  white-space: pre-wrap; text-align: center; pointer-events: none; opacity: 0; transition: opacity 1.2s ease;
+  width: max-content; max-width: 92vw; box-sizing: border-box; }
 .mv-hint.mv-show { opacity: 0.92; }
 .mv-debug { position: fixed; left: 8px; top: 8px; z-index: 15; color: #b8ffcf; background: rgba(0, 0, 0, 0.55);
   font: 12px/1.45 ui-monospace, Menlo, Consolas, monospace; padding: 6px 9px; border-radius: 4px;
