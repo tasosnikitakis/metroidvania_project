@@ -37,7 +37,16 @@ export function installShortcuts(editor: Editor, canvas: CanvasView, actions: Ac
       return;
     }
     if (typing) {
-      if (key === 'Escape' && e.target instanceof HTMLElement) e.target.blur();
+      const el = e.target as HTMLElement;
+      const numeric = el instanceof HTMLInputElement && el.type === 'number';
+      if (key === 'Escape' || (key === 'Enter' && el instanceof HTMLInputElement)) {
+        el.blur(); // done typing: give the keyboard back to the editor
+      } else if (numeric && mod && (key === 'z' || key === 'y')) {
+        // In a number box Ctrl+Z should undo the edit in the room, not fiddle with the digits.
+        e.preventDefault();
+        el.blur();
+        if (key === 'y' || e.shiftKey) editor.redo(); else editor.undo();
+      }
       return;
     }
 

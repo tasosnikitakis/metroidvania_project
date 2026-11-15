@@ -157,6 +157,8 @@ async function start(): Promise<void> {
   let draftCounter = editor.changeCounter;
   const saveDraft = (): void => {
     if (editor.changeCounter === draftCounter) return;
+    // Tiles being moved are "in the air" (cut out of the layer) - wait until they are put down.
+    if (editor.tileSelection?.floating) return;
     draftCounter = editor.changeCounter;
     if (editor.dirty) writeDraft(editor);
   };
