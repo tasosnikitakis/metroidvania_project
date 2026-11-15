@@ -16,6 +16,12 @@ function start(): void {
   const parent = document.getElementById('game') ?? document.body;
   showLoading('Loading…');
   const size = canvasSizeFor(parent);
+  // Phaser 4 can draw sprites with the wrong texture on some GPUs/drivers
+  // when it mixes several textures in one batch (seen as black shapes and
+  // sliced images). One texture per batch avoids it. For testing, override
+  // with ?mt=<number> in the URL (e.g. ?mt=8).
+  const mt = Number(new URLSearchParams(location.search).get('mt'));
+  const maxTextures = Number.isFinite(mt) && mt >= 1 ? Math.floor(mt) : 1;
 
   const game = new Phaser.Game({
     type: Phaser.AUTO,
@@ -33,6 +39,7 @@ function start(): void {
       antialias: true,
       roundPixels: false,
       powerPreference: 'high-performance',
+      maxTextures,
     },
     fps: { smoothStep: false },
     input: { keyboard: false, mouse: false, touch: false, gamepad: false }, // see input/InputManager.ts
