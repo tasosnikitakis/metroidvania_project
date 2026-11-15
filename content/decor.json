@@ -1,0 +1,382 @@
+{
+  "version": 1,
+  "decor": [
+    {
+      "key": "candelabra",
+      "name": "Candelabra",
+      "image": "assets/decor/candelabra.png",
+      "w": 40,
+      "h": 72,
+      "imageScale": 2,
+      "originX": 0.5,
+      "originY": 1,
+      "group": "light",
+      "glow": {
+        "x": 0,
+        "y": -52,
+        "radius": 70,
+        "color": "#ff9a3c",
+        "flicker": 0.12
+      }
+    },
+    {
+      "key": "wallTorch",
+      "name": "Wall torch",
+      "image": "assets/decor/wallTorch.png",
+      "w": 24,
+      "h": 48,
+      "imageScale": 2,
+      "originX": 0.5,
+      "originY": 0.5,
+      "group": "light",
+      "glow": {
+        "x": 0,
+        "y": -14,
+        "radius": 64,
+        "color": "#ff9a3c",
+        "flicker": 0.18
+      }
+    },
+    {
+      "key": "hangingLantern",
+      "name": "Hanging lantern",
+      "image": "assets/decor/hangingLantern.png",
+      "w": 28,
+      "h": 96,
+      "imageScale": 2,
+      "originX": 0.5,
+      "originY": 0,
+      "group": "light",
+      "sway": {
+        "angle": 4,
+        "period": 3.2
+      },
+      "glow": {
+        "x": 0,
+        "y": 76,
+        "radius": 60,
+        "color": "#ffe28a",
+        "flicker": 0.06
+      }
+    },
+    {
+      "key": "chandelier",
+      "name": "Chandelier",
+      "image": "assets/decor/chandelier.png",
+      "w": 96,
+      "h": 88,
+      "imageScale": 2,
+      "originX": 0.5,
+      "originY": 0,
+      "group": "light",
+      "sway": {
+        "angle": 2.5,
+        "period": 4.5
+      },
+      "glow": {
+        "x": 0,
+        "y": 44,
+        "radius": 110,
+        "color": "#ff9a3c",
+        "flicker": 0.1
+      }
+    },
+    {
+      "key": "windowArch",
+      "name": "Arched window (moonlight)",
+      "image": "assets/decor/windowArch.png",
+      "w": 96,
+      "h": 168,
+      "imageScale": 2,
+      "originX": 0.5,
+      "originY": 0.5,
+      "group": "architecture",
+      "glow": {
+        "x": 0,
+        "y": -6,
+        "radius": 120,
+        "color": "#9fd0ff"
+      }
+    },
+    {
+      "key": "roseWindow",
+      "name": "Rose window",
+      "image": "assets/decor/roseWindow.png",
+      "w": 120,
+      "h": 120,
+      "imageScale": 2,
+      "originX": 0.5,
+      "originY": 0.5,
+      "group": "architecture",
+      "glow": {
+        "x": 0,
+        "y": 0,
+        "radius": 100,
+        "color": "#ff86b8"
+      }
+    },
+    {
+      "key": "doorway",
+      "name": "Arched doorway",
+      "image": "assets/decor/doorway.png",
+      "w": 120,
+      "h": 168,
+      "imageScale": 2,
+      "originX": 0.5,
+      "originY": 1,
+      "group": "architecture"
+    },
+    {
+      "key": "pillar",
+      "name": "Pillar",
+      "image": "assets/decor/pillar.png",
+      "w": 48,
+      "h": 192,
+      "imageScale": 2,
+      "originX": 0.5,
+      "originY": 1,
+      "group": "architecture"
+    },
+    {
+      "key": "brokenColumn",
+      "name": "Broken column",
+      "image": "assets/decor/brokenColumn.png",
+      "w": 56,
+      "h": 80,
+      "imageScale": 2,
+      "originX": 0.5,
+      "originY": 1,
+      "group": "architecture"
+    },
+    {
+      "key": "gargoyle",
+      "name": "Sleepy gargoyle",
+      "image": "assets/decor/gargoyle.png",
+      "w": 64,
+      "h": 72,
+      "imageScale": 2,
+      "originX": 0.5,
+      "originY": 1,
+      "group": "statues"
+    },
+    {
+      "key": "knightArmor",
+      "name": "Suit of armour",
+      "image": "assets/decor/knightArmor.png",
+      "w": 48,
+      "h": 96,
+      "imageScale": 2,
+      "originX": 0.5,
+      "originY": 1,
+      "group": "statues"
+    },
+    {
+      "key": "tombstoneRound",
+      "name": "Tombstone (round)",
+      "image": "assets/decor/tombstoneRound.png",
+      "w": 40,
+      "h": 48,
+      "imageScale": 2,
+      "originX": 0.5,
+      "originY": 1,
+      "group": "graveyard"
+    },
+    {
+      "key": "tombstoneCross",
+      "name": "Tombstone (cross)",
+      "image": "assets/decor/tombstoneCross.png",
+      "w": 36,
+      "h": 56,
+      "imageScale": 2,
+      "originX": 0.5,
+      "originY": 1,
+      "group": "graveyard"
+    },
+    {
+      "key": "ironFence",
+      "name": "Iron fence",
+      "image": "assets/decor/ironFence.png",
+      "w": 96,
+      "h": 56,
+      "imageScale": 2,
+      "originX": 0.5,
+      "originY": 1,
+      "group": "graveyard"
+    },
+    {
+      "key": "deadTree",
+      "name": "Dead tree",
+      "image": "assets/decor/deadTree.png",
+      "w": 140,
+      "h": 180,
+      "imageScale": 2,
+      "originX": 0.5,
+      "originY": 1,
+      "group": "nature"
+    },
+    {
+      "key": "ivyCluster",
+      "name": "Ivy cluster",
+      "image": "assets/decor/ivyCluster.png",
+      "w": 64,
+      "h": 84,
+      "imageScale": 2,
+      "originX": 0.5,
+      "originY": 0,
+      "group": "nature",
+      "sway": {
+        "angle": 2,
+        "period": 3.8
+      }
+    },
+    {
+      "key": "mushrooms",
+      "name": "Glow mushrooms",
+      "image": "assets/decor/mushrooms.png",
+      "w": 40,
+      "h": 34,
+      "imageScale": 2,
+      "originX": 0.5,
+      "originY": 1,
+      "group": "nature",
+      "glow": {
+        "x": 0,
+        "y": -18,
+        "radius": 34,
+        "color": "#7df2c8"
+      }
+    },
+    {
+      "key": "pumpkin",
+      "name": "Jack-o-lantern",
+      "image": "assets/decor/pumpkin.png",
+      "w": 40,
+      "h": 36,
+      "imageScale": 2,
+      "originX": 0.5,
+      "originY": 1,
+      "group": "props",
+      "glow": {
+        "x": 0,
+        "y": -14,
+        "radius": 36,
+        "color": "#ff9a3c",
+        "flicker": 0.1
+      }
+    },
+    {
+      "key": "cauldron",
+      "name": "Bubbling cauldron",
+      "image": "assets/decor/cauldron.png",
+      "w": 56,
+      "h": 52,
+      "imageScale": 2,
+      "originX": 0.5,
+      "originY": 1,
+      "group": "props",
+      "glow": {
+        "x": 0,
+        "y": -40,
+        "radius": 40,
+        "color": "#7df2c8",
+        "flicker": 0.05
+      }
+    },
+    {
+      "key": "bookshelf",
+      "name": "Bookshelf",
+      "image": "assets/decor/bookshelf.png",
+      "w": 80,
+      "h": 120,
+      "imageScale": 2,
+      "originX": 0.5,
+      "originY": 1,
+      "group": "furniture"
+    },
+    {
+      "key": "barrel",
+      "name": "Barrel",
+      "image": "assets/decor/barrel.png",
+      "w": 40,
+      "h": 48,
+      "imageScale": 2,
+      "originX": 0.5,
+      "originY": 1,
+      "group": "props"
+    },
+    {
+      "key": "crate",
+      "name": "Crate",
+      "image": "assets/decor/crate.png",
+      "w": 44,
+      "h": 44,
+      "imageScale": 2,
+      "originX": 0.5,
+      "originY": 1,
+      "group": "props"
+    },
+    {
+      "key": "chest",
+      "name": "Treasure chest",
+      "image": "assets/decor/chest.png",
+      "w": 52,
+      "h": 44,
+      "imageScale": 2,
+      "originX": 0.5,
+      "originY": 1,
+      "group": "props"
+    },
+    {
+      "key": "signpost",
+      "name": "Signpost",
+      "image": "assets/decor/signpost.png",
+      "w": 48,
+      "h": 64,
+      "imageScale": 2,
+      "originX": 0.5,
+      "originY": 1,
+      "group": "props"
+    },
+    {
+      "key": "banner",
+      "name": "Moon banner",
+      "image": "assets/decor/banner.png",
+      "w": 40,
+      "h": 104,
+      "imageScale": 2,
+      "originX": 0.5,
+      "originY": 0,
+      "group": "cloth",
+      "sway": {
+        "angle": 3,
+        "period": 3.4
+      }
+    },
+    {
+      "key": "cobweb",
+      "name": "Cobweb (corner)",
+      "image": "assets/decor/cobweb.png",
+      "w": 64,
+      "h": 64,
+      "imageScale": 2,
+      "originX": 0,
+      "originY": 0,
+      "group": "creepy"
+    },
+    {
+      "key": "batRoost",
+      "name": "Sleeping bats",
+      "image": "assets/decor/batRoost.png",
+      "w": 64,
+      "h": 44,
+      "imageScale": 2,
+      "originX": 0.5,
+      "originY": 0,
+      "group": "creepy",
+      "sway": {
+        "angle": 3,
+        "period": 2.8
+      }
+    }
+  ]
+}

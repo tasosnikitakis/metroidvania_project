@@ -1,0 +1,4188 @@
+{
+  "version": 1,
+  "name": "hero",
+  "bones": [
+    {
+      "name": "root",
+      "parent": null,
+      "x": 0,
+      "y": 0,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "length": 0
+    },
+    {
+      "name": "hip",
+      "parent": "root",
+      "x": 0,
+      "y": -21,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "length": 6
+    },
+    {
+      "name": "torso",
+      "parent": "hip",
+      "x": 0,
+      "y": -1,
+      "rotation": -90,
+      "scaleX": 1,
+      "scaleY": 1,
+      "length": 16
+    },
+    {
+      "name": "head",
+      "parent": "torso",
+      "x": 17,
+      "y": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "length": 30
+    },
+    {
+      "name": "hoodTip1",
+      "parent": "head",
+      "x": 29,
+      "y": -10,
+      "rotation": 250,
+      "scaleX": 1,
+      "scaleY": 1,
+      "length": 11
+    },
+    {
+      "name": "hoodTip2",
+      "parent": "hoodTip1",
+      "x": 11,
+      "y": 0,
+      "rotation": -48,
+      "scaleX": 1,
+      "scaleY": 1,
+      "length": 10
+    },
+    {
+      "name": "cape1",
+      "parent": "torso",
+      "x": 15,
+      "y": -3,
+      "rotation": 190,
+      "scaleX": 1,
+      "scaleY": 1,
+      "length": 10
+    },
+    {
+      "name": "cape2",
+      "parent": "cape1",
+      "x": 10,
+      "y": 0,
+      "rotation": -3,
+      "scaleX": 1,
+      "scaleY": 1,
+      "length": 10
+    },
+    {
+      "name": "cape3",
+      "parent": "cape2",
+      "x": 10,
+      "y": 0,
+      "rotation": -2,
+      "scaleX": 1,
+      "scaleY": 1,
+      "length": 10
+    },
+    {
+      "name": "scarf1",
+      "parent": "torso",
+      "x": 18,
+      "y": -8.5,
+      "rotation": 240,
+      "scaleX": 1,
+      "scaleY": 1,
+      "length": 9
+    },
+    {
+      "name": "scarf2",
+      "parent": "scarf1",
+      "x": 9,
+      "y": 0,
+      "rotation": -32,
+      "scaleX": 1,
+      "scaleY": 1,
+      "length": 9
+    },
+    {
+      "name": "scarf3",
+      "parent": "scarf2",
+      "x": 9,
+      "y": 0,
+      "rotation": -20,
+      "scaleX": 1,
+      "scaleY": 1,
+      "length": 9
+    },
+    {
+      "name": "armB",
+      "parent": "torso",
+      "x": 13.5,
+      "y": -4.5,
+      "rotation": 190,
+      "scaleX": 1,
+      "scaleY": 1,
+      "length": 13.5
+    },
+    {
+      "name": "armF",
+      "parent": "torso",
+      "x": 13.5,
+      "y": 4.5,
+      "rotation": 170,
+      "scaleX": 1,
+      "scaleY": 1,
+      "length": 13.5
+    },
+    {
+      "name": "weapon",
+      "parent": "armF",
+      "x": 13.5,
+      "y": 0,
+      "rotation": -120,
+      "scaleX": 1,
+      "scaleY": 1,
+      "length": 30
+    },
+    {
+      "name": "thighB",
+      "parent": "hip",
+      "x": -2.5,
+      "y": 1,
+      "rotation": 90,
+      "scaleX": 1,
+      "scaleY": 1,
+      "length": 9
+    },
+    {
+      "name": "shinB",
+      "parent": "thighB",
+      "x": 9,
+      "y": 0,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "length": 11
+    },
+    {
+      "name": "thighF",
+      "parent": "hip",
+      "x": 3,
+      "y": 1,
+      "rotation": 90,
+      "scaleX": 1,
+      "scaleY": 1,
+      "length": 9
+    },
+    {
+      "name": "shinF",
+      "parent": "thighF",
+      "x": 9,
+      "y": 0,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "length": 11
+    },
+    {
+      "name": "fx",
+      "parent": "root",
+      "x": 2,
+      "y": -30,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "length": 10
+    }
+  ],
+  "slots": [
+    {
+      "name": "cape3",
+      "bone": "cape3",
+      "image": "assets/hero/cape3.png",
+      "w": 33,
+      "h": 28,
+      "imageScale": 2,
+      "x": 0,
+      "y": 0,
+      "rotation": -95,
+      "originX": 0.5771,
+      "originY": 0.2776
+    },
+    {
+      "name": "cape2",
+      "bone": "cape2",
+      "image": "assets/hero/cape2.png",
+      "w": 32,
+      "h": 29,
+      "imageScale": 2,
+      "x": 0,
+      "y": 0,
+      "rotation": -97,
+      "originX": 0.5707,
+      "originY": 0.2706
+    },
+    {
+      "name": "cape1",
+      "bone": "cape1",
+      "image": "assets/hero/cape1.png",
+      "w": 29,
+      "h": 30,
+      "imageScale": 2,
+      "x": 0,
+      "y": 0,
+      "rotation": -100,
+      "originX": 0.5862,
+      "originY": 0.3
+    },
+    {
+      "name": "scarf3",
+      "bone": "scarf3",
+      "image": "assets/hero/scarf3.png",
+      "w": 17,
+      "h": 26,
+      "imageScale": 2,
+      "x": 0,
+      "y": 0,
+      "rotation": -98,
+      "originX": 0.5577,
+      "originY": 0.2479
+    },
+    {
+      "name": "scarf2",
+      "bone": "scarf2",
+      "image": "assets/hero/scarf2.png",
+      "w": 23,
+      "h": 27,
+      "imageScale": 2,
+      "x": 0,
+      "y": 0,
+      "rotation": -118,
+      "originX": 0.6394,
+      "originY": 0.2778
+    },
+    {
+      "name": "scarf1",
+      "bone": "scarf1",
+      "image": "assets/hero/scarf1.png",
+      "w": 27,
+      "h": 24,
+      "imageScale": 2,
+      "x": 0,
+      "y": 0,
+      "rotation": -150,
+      "originX": 0.7222,
+      "originY": 0.375
+    },
+    {
+      "name": "armB",
+      "bone": "armB",
+      "image": "assets/hero/armB.png",
+      "w": 17,
+      "h": 28,
+      "imageScale": 2,
+      "x": 0,
+      "y": 0,
+      "rotation": -100,
+      "originX": 0.5588,
+      "originY": 0.2679
+    },
+    {
+      "name": "thighB",
+      "bone": "thighB",
+      "image": "assets/hero/thighB.png",
+      "w": 12,
+      "h": 21,
+      "imageScale": 2,
+      "x": 0,
+      "y": 0,
+      "rotation": -90,
+      "originX": 0.5,
+      "originY": 0.2857
+    },
+    {
+      "name": "shinB",
+      "bone": "shinB",
+      "image": "assets/hero/shinB.png",
+      "w": 19,
+      "h": 17,
+      "imageScale": 2,
+      "x": 0,
+      "y": 0,
+      "rotation": -90,
+      "originX": 0.3684,
+      "originY": 0.2353
+    },
+    {
+      "name": "thighF",
+      "bone": "thighF",
+      "image": "assets/hero/thighF.png",
+      "w": 12,
+      "h": 21,
+      "imageScale": 2,
+      "x": 0,
+      "y": 0,
+      "rotation": -90,
+      "originX": 0.5,
+      "originY": 0.2857
+    },
+    {
+      "name": "shinF",
+      "bone": "shinF",
+      "image": "assets/hero/shinF.png",
+      "w": 19,
+      "h": 17,
+      "imageScale": 2,
+      "x": 0,
+      "y": 0,
+      "rotation": -90,
+      "originX": 0.3684,
+      "originY": 0.2353
+    },
+    {
+      "name": "torso",
+      "bone": "torso",
+      "image": "assets/hero/torso.png",
+      "w": 28,
+      "h": 34,
+      "imageScale": 2,
+      "x": 0,
+      "y": 0,
+      "rotation": 90,
+      "originX": 0.5,
+      "originY": 0.6765
+    },
+    {
+      "name": "scarf",
+      "bone": "torso",
+      "image": "assets/hero/scarf.png",
+      "w": 27,
+      "h": 14,
+      "imageScale": 2,
+      "x": 0,
+      "y": 0,
+      "rotation": 90,
+      "originX": 0.5185,
+      "originY": 1.7857
+    },
+    {
+      "name": "hoodTip2",
+      "bone": "hoodTip2",
+      "image": "assets/hero/hoodTip2.png",
+      "w": 22,
+      "h": 26,
+      "imageScale": 2,
+      "x": 0,
+      "y": 0,
+      "rotation": -112,
+      "originX": 0.6211,
+      "originY": 0.2601
+    },
+    {
+      "name": "hoodTip1",
+      "bone": "hoodTip1",
+      "image": "assets/hero/hoodTip1.png",
+      "w": 31,
+      "h": 28,
+      "imageScale": 2,
+      "x": 0,
+      "y": 0,
+      "rotation": -160,
+      "originX": 0.6774,
+      "originY": 0.4286
+    },
+    {
+      "name": "head",
+      "bone": "head",
+      "image": "assets/hero/head.png",
+      "w": 31,
+      "h": 31,
+      "imageScale": 2,
+      "x": 0,
+      "y": 0,
+      "rotation": 90,
+      "originX": 0.3871,
+      "originY": 0.9677
+    },
+    {
+      "name": "hood",
+      "bone": "head",
+      "image": "assets/hero/hood.png",
+      "w": 41,
+      "h": 43,
+      "imageScale": 2,
+      "x": 0,
+      "y": 0,
+      "rotation": 90,
+      "originX": 0.4878,
+      "originY": 0.907
+    },
+    {
+      "name": "eyes",
+      "bone": "head",
+      "image": "assets/hero/eyes.png",
+      "w": 18,
+      "h": 13,
+      "imageScale": 2,
+      "x": 0,
+      "y": 0,
+      "rotation": 90,
+      "originX": 0.1667,
+      "originY": 1.5385
+    },
+    {
+      "name": "eyesClosed",
+      "bone": "head",
+      "image": "assets/hero/eyesClosed.png",
+      "w": 18,
+      "h": 13,
+      "imageScale": 2,
+      "x": 0,
+      "y": 0,
+      "rotation": 90,
+      "originX": 0.1667,
+      "originY": 1.5385,
+      "alpha": 0
+    },
+    {
+      "name": "weapon",
+      "bone": "weapon",
+      "image": "assets/hero/weapon.png",
+      "w": 45,
+      "h": 41,
+      "imageScale": 2,
+      "x": 0,
+      "y": 0,
+      "rotation": 40,
+      "originX": 0.2854,
+      "originY": 0.7023
+    },
+    {
+      "name": "glow",
+      "bone": "weapon",
+      "image": "assets/hero/glow.png",
+      "w": 73,
+      "h": 73,
+      "imageScale": 2,
+      "x": 0,
+      "y": 0,
+      "rotation": 40,
+      "originX": 0.3951,
+      "originY": 0.5862,
+      "alpha": 0.55,
+      "additive": true
+    },
+    {
+      "name": "armF",
+      "bone": "armF",
+      "image": "assets/hero/armF.png",
+      "w": 17,
+      "h": 28,
+      "imageScale": 2,
+      "x": 0,
+      "y": 0,
+      "rotation": -80,
+      "originX": 0.4412,
+      "originY": 0.2679
+    },
+    {
+      "name": "slash",
+      "bone": "fx",
+      "image": "assets/hero/slash.png",
+      "w": 38,
+      "h": 84,
+      "imageScale": 2,
+      "x": 0,
+      "y": 0,
+      "rotation": 0,
+      "originX": -0.2105,
+      "originY": 0.5238,
+      "alpha": 0
+    }
+  ],
+  "animations": {
+    "idle": {
+      "duration": 2.6,
+      "loop": true,
+      "bones": {
+        "hip": {
+          "x": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 1.3,
+              "v": 0
+            }
+          ],
+          "y": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 1.3,
+              "v": 1.1
+            }
+          ]
+        },
+        "thighF": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": -2.833
+            },
+            {
+              "t": 1.3,
+              "v": -21.184
+            }
+          ]
+        },
+        "shinF": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": 5.151
+            },
+            {
+              "t": 1.3,
+              "v": 38.382
+            }
+          ]
+        },
+        "thighB": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": -2.833
+            },
+            {
+              "t": 1.3,
+              "v": -21.184
+            }
+          ]
+        },
+        "shinB": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": 5.151
+            },
+            {
+              "t": 1.3,
+              "v": 38.382
+            }
+          ]
+        },
+        "torso": {
+          "rotation": [
+            {
+              "t": 0.78,
+              "v": 1.2
+            },
+            {
+              "t": 2.08,
+              "v": -1.2
+            }
+          ]
+        },
+        "head": {
+          "rotation": [
+            {
+              "t": 1.118,
+              "v": 1.6
+            },
+            {
+              "t": 2.418,
+              "v": -1.6
+            }
+          ],
+          "x": [
+            {
+              "t": 0.962,
+              "v": 0.5
+            },
+            {
+              "t": 2.262,
+              "v": -0.5
+            }
+          ]
+        },
+        "armB": {
+          "rotation": [
+            {
+              "t": 1.222,
+              "v": 3
+            },
+            {
+              "t": 2.522,
+              "v": -3
+            }
+          ]
+        },
+        "armF": {
+          "rotation": [
+            {
+              "t": 0.078,
+              "v": -8.5
+            },
+            {
+              "t": 1.378,
+              "v": -3.5
+            }
+          ]
+        },
+        "weapon": {
+          "rotation": [
+            {
+              "t": 0.286,
+              "v": -1
+            },
+            {
+              "t": 1.586,
+              "v": 5
+            }
+          ]
+        },
+        "cape1": {
+          "rotation": [
+            {
+              "t": 1.17,
+              "v": 1.6
+            },
+            {
+              "t": 2.47,
+              "v": -1.6
+            }
+          ]
+        },
+        "cape2": {
+          "rotation": [
+            {
+              "t": 0.182,
+              "v": -2.6
+            },
+            {
+              "t": 1.482,
+              "v": 2.6
+            }
+          ]
+        },
+        "cape3": {
+          "rotation": [
+            {
+              "t": 0.494,
+              "v": -3.6
+            },
+            {
+              "t": 1.794,
+              "v": 3.6
+            }
+          ]
+        },
+        "scarf1": {
+          "rotation": [
+            {
+              "t": 0.91,
+              "v": 3
+            },
+            {
+              "t": 2.21,
+              "v": -3
+            }
+          ]
+        },
+        "scarf2": {
+          "rotation": [
+            {
+              "t": 1.274,
+              "v": 5
+            },
+            {
+              "t": 2.574,
+              "v": -5
+            }
+          ]
+        },
+        "scarf3": {
+          "rotation": [
+            {
+              "t": 0.338,
+              "v": -7
+            },
+            {
+              "t": 1.638,
+              "v": 7
+            }
+          ]
+        },
+        "hoodTip1": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": -3
+            },
+            {
+              "t": 1.3,
+              "v": 3
+            }
+          ]
+        },
+        "hoodTip2": {
+          "rotation": [
+            {
+              "t": 0.416,
+              "v": -6
+            },
+            {
+              "t": 1.716,
+              "v": 6
+            }
+          ]
+        }
+      },
+      "slots": {
+        "eyes": {
+          "alpha": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "step"
+            },
+            {
+              "t": 1.95,
+              "v": 0,
+              "ease": "step"
+            },
+            {
+              "t": 2.07,
+              "v": 1,
+              "ease": "step"
+            }
+          ]
+        },
+        "eyesClosed": {
+          "alpha": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "step"
+            },
+            {
+              "t": 1.95,
+              "v": 1,
+              "ease": "step"
+            },
+            {
+              "t": 2.07,
+              "v": 0,
+              "ease": "step"
+            }
+          ]
+        },
+        "glow": {
+          "alpha": [
+            {
+              "t": 0,
+              "v": 0.5
+            },
+            {
+              "t": 0.65,
+              "v": 0.68
+            },
+            {
+              "t": 1.3,
+              "v": 0.5
+            },
+            {
+              "t": 1.95,
+              "v": 0.68
+            }
+          ]
+        }
+      }
+    },
+    "run": {
+      "duration": 0.6,
+      "loop": true,
+      "bones": {
+        "hip": {
+          "y": [
+            {
+              "t": 0,
+              "v": 1.6
+            },
+            {
+              "t": 0.075,
+              "v": 3.2
+            },
+            {
+              "t": 0.15,
+              "v": 0.4
+            },
+            {
+              "t": 0.225,
+              "v": -1.8
+            },
+            {
+              "t": 0.3,
+              "v": 1.6
+            },
+            {
+              "t": 0.375,
+              "v": 3.2
+            },
+            {
+              "t": 0.45,
+              "v": 0.4
+            },
+            {
+              "t": 0.525,
+              "v": -1.8
+            }
+          ],
+          "x": [
+            {
+              "t": 0.105,
+              "v": 0.6
+            },
+            {
+              "t": 0.255,
+              "v": -0.6
+            },
+            {
+              "t": 0.405,
+              "v": 0.6
+            },
+            {
+              "t": 0.555,
+              "v": -0.6
+            }
+          ]
+        },
+        "thighF": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": -28.898,
+              "ease": "linear"
+            },
+            {
+              "t": 0.075,
+              "v": -47.217,
+              "ease": "linear"
+            },
+            {
+              "t": 0.15,
+              "v": -7.379,
+              "ease": "linear"
+            },
+            {
+              "t": 0.225,
+              "v": 17.392,
+              "ease": "linear"
+            },
+            {
+              "t": 0.3,
+              "v": 4.924,
+              "ease": "linear"
+            },
+            {
+              "t": 0.375,
+              "v": -14.697,
+              "ease": "linear"
+            },
+            {
+              "t": 0.45,
+              "v": -77.927,
+              "ease": "linear"
+            },
+            {
+              "t": 0.525,
+              "v": -53.33,
+              "ease": "linear"
+            },
+            {
+              "t": 0.6,
+              "v": -28.898,
+              "ease": "linear"
+            }
+          ]
+        },
+        "shinF": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": 5.151,
+              "ease": "linear"
+            },
+            {
+              "t": 0.075,
+              "v": 60.918,
+              "ease": "linear"
+            },
+            {
+              "t": 0.15,
+              "v": 21.352,
+              "ease": "linear"
+            },
+            {
+              "t": 0.225,
+              "v": 5.151,
+              "ease": "linear"
+            },
+            {
+              "t": 0.3,
+              "v": 72.297,
+              "ease": "linear"
+            },
+            {
+              "t": 0.375,
+              "v": 125.493,
+              "ease": "linear"
+            },
+            {
+              "t": 0.45,
+              "v": 126.921,
+              "ease": "linear"
+            },
+            {
+              "t": 0.525,
+              "v": 46.641,
+              "ease": "linear"
+            },
+            {
+              "t": 0.6,
+              "v": 5.151,
+              "ease": "linear"
+            }
+          ]
+        },
+        "thighB": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": 4.924,
+              "ease": "linear"
+            },
+            {
+              "t": 0.075,
+              "v": -14.697,
+              "ease": "linear"
+            },
+            {
+              "t": 0.15,
+              "v": -77.927,
+              "ease": "linear"
+            },
+            {
+              "t": 0.225,
+              "v": -53.33,
+              "ease": "linear"
+            },
+            {
+              "t": 0.3,
+              "v": -28.898,
+              "ease": "linear"
+            },
+            {
+              "t": 0.375,
+              "v": -47.217,
+              "ease": "linear"
+            },
+            {
+              "t": 0.45,
+              "v": -7.379,
+              "ease": "linear"
+            },
+            {
+              "t": 0.525,
+              "v": 17.392,
+              "ease": "linear"
+            },
+            {
+              "t": 0.6,
+              "v": 4.924,
+              "ease": "linear"
+            }
+          ]
+        },
+        "shinB": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": 72.297,
+              "ease": "linear"
+            },
+            {
+              "t": 0.075,
+              "v": 125.493,
+              "ease": "linear"
+            },
+            {
+              "t": 0.15,
+              "v": 126.921,
+              "ease": "linear"
+            },
+            {
+              "t": 0.225,
+              "v": 46.641,
+              "ease": "linear"
+            },
+            {
+              "t": 0.3,
+              "v": 5.151,
+              "ease": "linear"
+            },
+            {
+              "t": 0.375,
+              "v": 60.918,
+              "ease": "linear"
+            },
+            {
+              "t": 0.45,
+              "v": 21.352,
+              "ease": "linear"
+            },
+            {
+              "t": 0.525,
+              "v": 5.151,
+              "ease": "linear"
+            },
+            {
+              "t": 0.6,
+              "v": 72.297,
+              "ease": "linear"
+            }
+          ]
+        },
+        "torso": {
+          "rotation": [
+            {
+              "t": 0.09,
+              "v": 13.2
+            },
+            {
+              "t": 0.24,
+              "v": 8.8
+            },
+            {
+              "t": 0.39,
+              "v": 13.2
+            },
+            {
+              "t": 0.54,
+              "v": 8.8
+            }
+          ]
+        },
+        "head": {
+          "rotation": [
+            {
+              "t": 0.135,
+              "v": -5.8
+            },
+            {
+              "t": 0.285,
+              "v": -10.2
+            },
+            {
+              "t": 0.435,
+              "v": -5.8
+            },
+            {
+              "t": 0.585,
+              "v": -10.2
+            }
+          ],
+          "x": [
+            {
+              "t": 0.12,
+              "v": 0.6
+            },
+            {
+              "t": 0.27,
+              "v": -0.6
+            },
+            {
+              "t": 0.42,
+              "v": 0.6
+            },
+            {
+              "t": 0.57,
+              "v": -0.6
+            }
+          ]
+        },
+        "armB": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": -48
+            },
+            {
+              "t": 0.3,
+              "v": 40
+            }
+          ]
+        },
+        "armF": {
+          "rotation": [
+            {
+              "t": 0.018,
+              "v": -43
+            },
+            {
+              "t": 0.318,
+              "v": -61
+            }
+          ]
+        },
+        "weapon": {
+          "rotation": [
+            {
+              "t": 0.09,
+              "v": 41
+            },
+            {
+              "t": 0.39,
+              "v": 27
+            }
+          ]
+        },
+        "cape1": {
+          "rotation": [
+            {
+              "t": 0.105,
+              "v": 39
+            },
+            {
+              "t": 0.255,
+              "v": 29
+            },
+            {
+              "t": 0.405,
+              "v": 39
+            },
+            {
+              "t": 0.555,
+              "v": 29
+            }
+          ]
+        },
+        "cape2": {
+          "rotation": [
+            {
+              "t": 0.147,
+              "v": 22
+            },
+            {
+              "t": 0.297,
+              "v": 6
+            },
+            {
+              "t": 0.447,
+              "v": 22
+            },
+            {
+              "t": 0.597,
+              "v": 6
+            }
+          ]
+        },
+        "cape3": {
+          "rotation": [
+            {
+              "t": 0.039,
+              "v": -1
+            },
+            {
+              "t": 0.189,
+              "v": 21
+            },
+            {
+              "t": 0.339,
+              "v": -1
+            },
+            {
+              "t": 0.489,
+              "v": 21
+            }
+          ]
+        },
+        "scarf1": {
+          "rotation": [
+            {
+              "t": 0.09,
+              "v": 33
+            },
+            {
+              "t": 0.24,
+              "v": 19
+            },
+            {
+              "t": 0.39,
+              "v": 33
+            },
+            {
+              "t": 0.54,
+              "v": 19
+            }
+          ]
+        },
+        "scarf2": {
+          "rotation": [
+            {
+              "t": 0.138,
+              "v": 37
+            },
+            {
+              "t": 0.288,
+              "v": 15
+            },
+            {
+              "t": 0.438,
+              "v": 37
+            },
+            {
+              "t": 0.588,
+              "v": 15
+            }
+          ]
+        },
+        "scarf3": {
+          "rotation": [
+            {
+              "t": 0.036,
+              "v": 1
+            },
+            {
+              "t": 0.186,
+              "v": 31
+            },
+            {
+              "t": 0.336,
+              "v": 1
+            },
+            {
+              "t": 0.486,
+              "v": 31
+            }
+          ]
+        },
+        "hoodTip1": {
+          "rotation": [
+            {
+              "t": 0.12,
+              "v": 17
+            },
+            {
+              "t": 0.27,
+              "v": 3
+            },
+            {
+              "t": 0.42,
+              "v": 17
+            },
+            {
+              "t": 0.57,
+              "v": 3
+            }
+          ]
+        },
+        "hoodTip2": {
+          "rotation": [
+            {
+              "t": 0.024,
+              "v": 8
+            },
+            {
+              "t": 0.174,
+              "v": 32
+            },
+            {
+              "t": 0.324,
+              "v": 8
+            },
+            {
+              "t": 0.474,
+              "v": 32
+            }
+          ]
+        }
+      },
+      "events": [
+        {
+          "t": 0,
+          "name": "step"
+        },
+        {
+          "t": 0.3,
+          "name": "step"
+        }
+      ]
+    },
+    "jump": {
+      "duration": 0.5,
+      "loop": true,
+      "bones": {
+        "hip": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": -3
+            }
+          ]
+        },
+        "torso": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": 4
+            }
+          ]
+        },
+        "head": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": -10
+            }
+          ]
+        },
+        "thighF": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": -64
+            }
+          ]
+        },
+        "shinF": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": 88
+            }
+          ]
+        },
+        "thighB": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": 20
+            }
+          ]
+        },
+        "shinB": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": 24
+            }
+          ]
+        },
+        "armB": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": 38
+            }
+          ]
+        },
+        "armF": {
+          "rotation": [
+            {
+              "t": 0.125,
+              "v": -69
+            },
+            {
+              "t": 0.375,
+              "v": -75
+            }
+          ]
+        },
+        "weapon": {
+          "rotation": [
+            {
+              "t": 0.225,
+              "v": 54
+            },
+            {
+              "t": 0.475,
+              "v": 46
+            }
+          ]
+        },
+        "cape1": {
+          "rotation": [
+            {
+              "t": 0.063,
+              "v": -3.5
+            },
+            {
+              "t": 0.188,
+              "v": -8.5
+            },
+            {
+              "t": 0.313,
+              "v": -3.5
+            },
+            {
+              "t": 0.438,
+              "v": -8.5
+            }
+          ]
+        },
+        "cape2": {
+          "rotation": [
+            {
+              "t": 0.1,
+              "v": -3
+            },
+            {
+              "t": 0.225,
+              "v": -11
+            },
+            {
+              "t": 0.35,
+              "v": -3
+            },
+            {
+              "t": 0.475,
+              "v": -11
+            }
+          ]
+        },
+        "cape3": {
+          "rotation": [
+            {
+              "t": 0.013,
+              "v": -12
+            },
+            {
+              "t": 0.138,
+              "v": 0
+            },
+            {
+              "t": 0.263,
+              "v": -12
+            },
+            {
+              "t": 0.388,
+              "v": 0
+            }
+          ]
+        },
+        "scarf1": {
+          "rotation": [
+            {
+              "t": 0.063,
+              "v": -29
+            },
+            {
+              "t": 0.188,
+              "v": -39
+            },
+            {
+              "t": 0.313,
+              "v": -29
+            },
+            {
+              "t": 0.438,
+              "v": -39
+            }
+          ]
+        },
+        "scarf2": {
+          "rotation": [
+            {
+              "t": 0.1,
+              "v": 0
+            },
+            {
+              "t": 0.225,
+              "v": -16
+            },
+            {
+              "t": 0.35,
+              "v": 0
+            },
+            {
+              "t": 0.475,
+              "v": -16
+            }
+          ]
+        },
+        "scarf3": {
+          "rotation": [
+            {
+              "t": 0.013,
+              "v": -8
+            },
+            {
+              "t": 0.138,
+              "v": 12
+            },
+            {
+              "t": 0.263,
+              "v": -8
+            },
+            {
+              "t": 0.388,
+              "v": 12
+            }
+          ]
+        },
+        "hoodTip1": {
+          "rotation": [
+            {
+              "t": 0.063,
+              "v": -23
+            },
+            {
+              "t": 0.188,
+              "v": -33
+            },
+            {
+              "t": 0.313,
+              "v": -23
+            },
+            {
+              "t": 0.438,
+              "v": -33
+            }
+          ]
+        },
+        "hoodTip2": {
+          "rotation": [
+            {
+              "t": 0.1,
+              "v": 0
+            },
+            {
+              "t": 0.225,
+              "v": -16
+            },
+            {
+              "t": 0.35,
+              "v": 0
+            },
+            {
+              "t": 0.475,
+              "v": -16
+            }
+          ]
+        }
+      }
+    },
+    "fall": {
+      "duration": 0.5,
+      "loop": true,
+      "bones": {
+        "torso": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": -5
+            }
+          ]
+        },
+        "head": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": 9
+            }
+          ]
+        },
+        "thighF": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": -36
+            }
+          ]
+        },
+        "shinF": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": 52
+            }
+          ]
+        },
+        "thighB": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": 12
+            }
+          ]
+        },
+        "shinB": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": 42
+            }
+          ]
+        },
+        "armB": {
+          "rotation": [
+            {
+              "t": 0.063,
+              "v": 134
+            },
+            {
+              "t": 0.188,
+              "v": 122
+            },
+            {
+              "t": 0.313,
+              "v": 134
+            },
+            {
+              "t": 0.438,
+              "v": 122
+            }
+          ]
+        },
+        "armF": {
+          "rotation": [
+            {
+              "t": 0.013,
+              "v": -105
+            },
+            {
+              "t": 0.138,
+              "v": -95
+            },
+            {
+              "t": 0.263,
+              "v": -105
+            },
+            {
+              "t": 0.388,
+              "v": -95
+            }
+          ]
+        },
+        "weapon": {
+          "rotation": [
+            {
+              "t": 0.037,
+              "v": 73
+            },
+            {
+              "t": 0.163,
+              "v": 83
+            },
+            {
+              "t": 0.288,
+              "v": 73
+            },
+            {
+              "t": 0.413,
+              "v": 83
+            }
+          ]
+        },
+        "cape1": {
+          "rotation": [
+            {
+              "t": 0.063,
+              "v": 64
+            },
+            {
+              "t": 0.188,
+              "v": 52
+            },
+            {
+              "t": 0.313,
+              "v": 64
+            },
+            {
+              "t": 0.438,
+              "v": 52
+            }
+          ]
+        },
+        "cape2": {
+          "rotation": [
+            {
+              "t": 0.103,
+              "v": 38
+            },
+            {
+              "t": 0.228,
+              "v": 18
+            },
+            {
+              "t": 0.353,
+              "v": 38
+            },
+            {
+              "t": 0.478,
+              "v": 18
+            }
+          ]
+        },
+        "cape3": {
+          "rotation": [
+            {
+              "t": 0.018,
+              "v": 4
+            },
+            {
+              "t": 0.143,
+              "v": 32
+            },
+            {
+              "t": 0.268,
+              "v": 4
+            },
+            {
+              "t": 0.393,
+              "v": 32
+            }
+          ]
+        },
+        "scarf1": {
+          "rotation": [
+            {
+              "t": 0.088,
+              "v": 80
+            },
+            {
+              "t": 0.213,
+              "v": 64
+            },
+            {
+              "t": 0.338,
+              "v": 80
+            },
+            {
+              "t": 0.463,
+              "v": 64
+            }
+          ]
+        },
+        "scarf2": {
+          "rotation": [
+            {
+              "t": 0.003,
+              "v": 22
+            },
+            {
+              "t": 0.128,
+              "v": 46
+            },
+            {
+              "t": 0.253,
+              "v": 22
+            },
+            {
+              "t": 0.378,
+              "v": 46
+            }
+          ]
+        },
+        "scarf3": {
+          "rotation": [
+            {
+              "t": 0.042,
+              "v": 2
+            },
+            {
+              "t": 0.168,
+              "v": 34
+            },
+            {
+              "t": 0.293,
+              "v": 2
+            },
+            {
+              "t": 0.418,
+              "v": 34
+            }
+          ]
+        },
+        "hoodTip1": {
+          "rotation": [
+            {
+              "t": 0.113,
+              "v": 56
+            },
+            {
+              "t": 0.238,
+              "v": 40
+            },
+            {
+              "t": 0.363,
+              "v": 56
+            },
+            {
+              "t": 0.488,
+              "v": 40
+            }
+          ]
+        },
+        "hoodTip2": {
+          "rotation": [
+            {
+              "t": 0.027,
+              "v": 18
+            },
+            {
+              "t": 0.153,
+              "v": 42
+            },
+            {
+              "t": 0.277,
+              "v": 18
+            },
+            {
+              "t": 0.402,
+              "v": 42
+            }
+          ]
+        }
+      }
+    },
+    "land": {
+      "duration": 0.25,
+      "loop": false,
+      "bones": {
+        "hip": {
+          "x": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.06,
+              "v": 0,
+              "ease": "backOut"
+            },
+            {
+              "t": 0.25,
+              "v": 0
+            }
+          ],
+          "y": [
+            {
+              "t": 0,
+              "v": 6,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.06,
+              "v": 8.5,
+              "ease": "backOut"
+            },
+            {
+              "t": 0.25,
+              "v": 0
+            }
+          ]
+        },
+        "thighF": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": -60.792,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.06,
+              "v": -74.556,
+              "ease": "backOut"
+            },
+            {
+              "t": 0.25,
+              "v": -2.833
+            }
+          ]
+        },
+        "shinF": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": 89.928,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.06,
+              "v": 108.706,
+              "ease": "backOut"
+            },
+            {
+              "t": 0.25,
+              "v": 5.151
+            }
+          ]
+        },
+        "thighB": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": -40.543,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.06,
+              "v": -50.026,
+              "ease": "backOut"
+            },
+            {
+              "t": 0.25,
+              "v": -2.833
+            }
+          ]
+        },
+        "shinB": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": 89.928,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.06,
+              "v": 108.706,
+              "ease": "backOut"
+            },
+            {
+              "t": 0.25,
+              "v": 5.151
+            }
+          ]
+        },
+        "torso": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": 10,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.06,
+              "v": 17,
+              "ease": "backOut"
+            },
+            {
+              "t": 0.25,
+              "v": 0
+            }
+          ]
+        },
+        "head": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": 4,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.06,
+              "v": 11,
+              "ease": "backOut"
+            },
+            {
+              "t": 0.25,
+              "v": 0
+            }
+          ]
+        },
+        "armB": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": 70,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.06,
+              "v": 38,
+              "ease": "backOut"
+            },
+            {
+              "t": 0.25,
+              "v": 0
+            }
+          ]
+        },
+        "armF": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": -60,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.06,
+              "v": -26,
+              "ease": "backOut"
+            },
+            {
+              "t": 0.25,
+              "v": 0
+            }
+          ]
+        },
+        "weapon": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": 30,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.06,
+              "v": 12,
+              "ease": "backOut"
+            },
+            {
+              "t": 0.25,
+              "v": 0
+            }
+          ]
+        },
+        "cape1": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": 46,
+              "ease": "quadIn"
+            },
+            {
+              "t": 0.09,
+              "v": -9,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.17,
+              "v": 3
+            },
+            {
+              "t": 0.25,
+              "v": 0
+            }
+          ]
+        },
+        "cape2": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": 26,
+              "ease": "quadIn"
+            },
+            {
+              "t": 0.11,
+              "v": -9,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.19,
+              "v": 3
+            },
+            {
+              "t": 0.25,
+              "v": 0
+            }
+          ]
+        },
+        "cape3": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": 16,
+              "ease": "quadIn"
+            },
+            {
+              "t": 0.13,
+              "v": -8,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.21,
+              "v": 3
+            },
+            {
+              "t": 0.25,
+              "v": 0
+            }
+          ]
+        },
+        "scarf1": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": 60,
+              "ease": "quadIn"
+            },
+            {
+              "t": 0.1,
+              "v": -22,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.19,
+              "v": 6
+            },
+            {
+              "t": 0.25,
+              "v": 0
+            }
+          ]
+        },
+        "scarf2": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": 30,
+              "ease": "quadIn"
+            },
+            {
+              "t": 0.12,
+              "v": -18,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.21,
+              "v": 6
+            },
+            {
+              "t": 0.25,
+              "v": 0
+            }
+          ]
+        },
+        "scarf3": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": 16,
+              "ease": "quadIn"
+            },
+            {
+              "t": 0.14,
+              "v": -14,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.22,
+              "v": 5
+            },
+            {
+              "t": 0.25,
+              "v": 0
+            }
+          ]
+        },
+        "hoodTip1": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": 40,
+              "ease": "quadIn"
+            },
+            {
+              "t": 0.1,
+              "v": -26,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.2,
+              "v": 6
+            },
+            {
+              "t": 0.25,
+              "v": 0
+            }
+          ]
+        },
+        "hoodTip2": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": 26,
+              "ease": "quadIn"
+            },
+            {
+              "t": 0.12,
+              "v": -22,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.22,
+              "v": 6
+            },
+            {
+              "t": 0.25,
+              "v": 0
+            }
+          ]
+        }
+      },
+      "events": [
+        {
+          "t": 0,
+          "name": "land"
+        }
+      ]
+    },
+    "doubleJump": {
+      "duration": 0.42,
+      "loop": false,
+      "bones": {
+        "hip": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "quadIn"
+            },
+            {
+              "t": 0.07,
+              "v": 40,
+              "ease": "linear"
+            },
+            {
+              "t": 0.28,
+              "v": 310,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.38,
+              "v": 360
+            }
+          ],
+          "y": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.14,
+              "v": -5
+            },
+            {
+              "t": 0.38,
+              "v": 0
+            }
+          ]
+        },
+        "torso": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": 8,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.08,
+              "v": 22
+            },
+            {
+              "t": 0.27,
+              "v": 22,
+              "ease": "quadInOut"
+            },
+            {
+              "t": 0.42,
+              "v": -4
+            }
+          ]
+        },
+        "head": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": 4,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.08,
+              "v": 20
+            },
+            {
+              "t": 0.27,
+              "v": 20,
+              "ease": "quadInOut"
+            },
+            {
+              "t": 0.42,
+              "v": 6
+            }
+          ]
+        },
+        "thighF": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": -50,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.08,
+              "v": -96
+            },
+            {
+              "t": 0.27,
+              "v": -96,
+              "ease": "quadInOut"
+            },
+            {
+              "t": 0.42,
+              "v": -30
+            }
+          ]
+        },
+        "shinF": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": 70,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.08,
+              "v": 118
+            },
+            {
+              "t": 0.27,
+              "v": 118,
+              "ease": "quadInOut"
+            },
+            {
+              "t": 0.42,
+              "v": 46
+            }
+          ]
+        },
+        "thighB": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": -10,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.08,
+              "v": -74
+            },
+            {
+              "t": 0.27,
+              "v": -74,
+              "ease": "quadInOut"
+            },
+            {
+              "t": 0.42,
+              "v": 12
+            }
+          ]
+        },
+        "shinB": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": 40,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.08,
+              "v": 112
+            },
+            {
+              "t": 0.27,
+              "v": 112,
+              "ease": "quadInOut"
+            },
+            {
+              "t": 0.42,
+              "v": 38
+            }
+          ]
+        },
+        "armB": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": 20,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.08,
+              "v": -50
+            },
+            {
+              "t": 0.27,
+              "v": -50,
+              "ease": "quadInOut"
+            },
+            {
+              "t": 0.42,
+              "v": 110
+            }
+          ]
+        },
+        "armF": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": -60,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.08,
+              "v": -72
+            },
+            {
+              "t": 0.27,
+              "v": -72,
+              "ease": "quadInOut"
+            },
+            {
+              "t": 0.42,
+              "v": -110
+            }
+          ]
+        },
+        "weapon": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": 30,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.08,
+              "v": 20
+            },
+            {
+              "t": 0.27,
+              "v": 20,
+              "ease": "quadInOut"
+            },
+            {
+              "t": 0.42,
+              "v": 60
+            }
+          ]
+        },
+        "cape1": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.1,
+              "v": -46
+            },
+            {
+              "t": 0.27,
+              "v": -40,
+              "ease": "quadInOut"
+            },
+            {
+              "t": 0.37,
+              "v": 40
+            },
+            {
+              "t": 0.42,
+              "v": 52
+            }
+          ]
+        },
+        "cape2": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.12,
+              "v": -34
+            },
+            {
+              "t": 0.29,
+              "v": -30,
+              "ease": "quadInOut"
+            },
+            {
+              "t": 0.39,
+              "v": 24
+            },
+            {
+              "t": 0.42,
+              "v": 28
+            }
+          ]
+        },
+        "cape3": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.14,
+              "v": -30
+            },
+            {
+              "t": 0.31,
+              "v": -26,
+              "ease": "quadInOut"
+            },
+            {
+              "t": 0.42,
+              "v": 18
+            }
+          ]
+        },
+        "scarf1": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.1,
+              "v": -70
+            },
+            {
+              "t": 0.28,
+              "v": -60,
+              "ease": "quadInOut"
+            },
+            {
+              "t": 0.42,
+              "v": 66
+            }
+          ]
+        },
+        "scarf2": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.12,
+              "v": -30
+            },
+            {
+              "t": 0.3,
+              "v": -30,
+              "ease": "quadInOut"
+            },
+            {
+              "t": 0.42,
+              "v": 30
+            }
+          ]
+        },
+        "scarf3": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.14,
+              "v": -25
+            },
+            {
+              "t": 0.32,
+              "v": -25,
+              "ease": "quadInOut"
+            },
+            {
+              "t": 0.42,
+              "v": 16
+            }
+          ]
+        },
+        "hoodTip1": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.1,
+              "v": -50
+            },
+            {
+              "t": 0.28,
+              "v": -40,
+              "ease": "quadInOut"
+            },
+            {
+              "t": 0.42,
+              "v": 44
+            }
+          ]
+        },
+        "hoodTip2": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.12,
+              "v": -40
+            },
+            {
+              "t": 0.3,
+              "v": -30,
+              "ease": "quadInOut"
+            },
+            {
+              "t": 0.42,
+              "v": 28
+            }
+          ]
+        }
+      },
+      "slots": {
+        "glow": {
+          "alpha": [
+            {
+              "t": 0,
+              "v": 0.55,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.1,
+              "v": 1
+            },
+            {
+              "t": 0.42,
+              "v": 0.55
+            }
+          ]
+        }
+      },
+      "events": [
+        {
+          "t": 0,
+          "name": "flip"
+        }
+      ]
+    },
+    "wallSlide": {
+      "duration": 0.8,
+      "loop": true,
+      "bones": {
+        "hip": {
+          "x": [
+            {
+              "t": 0,
+              "v": -1
+            }
+          ],
+          "y": [
+            {
+              "t": 0.1,
+              "v": 0.6
+            },
+            {
+              "t": 0.3,
+              "v": -0.6
+            },
+            {
+              "t": 0.5,
+              "v": 0.6
+            },
+            {
+              "t": 0.7,
+              "v": -0.6
+            }
+          ]
+        },
+        "torso": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": -5
+            }
+          ]
+        },
+        "head": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": 16
+            }
+          ]
+        },
+        "thighB": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": -36.528
+            }
+          ]
+        },
+        "shinB": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": 117.28
+            }
+          ]
+        },
+        "thighF": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": -14
+            }
+          ]
+        },
+        "shinF": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": 30
+            }
+          ]
+        },
+        "weapon": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": 24
+            }
+          ]
+        },
+        "armB": {
+          "rotation": [
+            {
+              "t": 0.18,
+              "v": 95
+            },
+            {
+              "t": 0.38,
+              "v": 89
+            },
+            {
+              "t": 0.58,
+              "v": 95
+            },
+            {
+              "t": 0.78,
+              "v": 89
+            }
+          ]
+        },
+        "armF": {
+          "rotation": [
+            {
+              "t": 0.28,
+              "v": -26
+            },
+            {
+              "t": 0.68,
+              "v": -34
+            }
+          ]
+        },
+        "cape1": {
+          "rotation": [
+            {
+              "t": 0.1,
+              "v": 68
+            },
+            {
+              "t": 0.3,
+              "v": 64
+            },
+            {
+              "t": 0.5,
+              "v": 68
+            },
+            {
+              "t": 0.7,
+              "v": 64
+            }
+          ]
+        },
+        "cape2": {
+          "rotation": [
+            {
+              "t": 0.164,
+              "v": 84
+            },
+            {
+              "t": 0.364,
+              "v": 76
+            },
+            {
+              "t": 0.564,
+              "v": 84
+            },
+            {
+              "t": 0.764,
+              "v": 76
+            }
+          ]
+        },
+        "cape3": {
+          "rotation": [
+            {
+              "t": 0.028,
+              "v": 17
+            },
+            {
+              "t": 0.228,
+              "v": 31
+            },
+            {
+              "t": 0.428,
+              "v": 17
+            },
+            {
+              "t": 0.628,
+              "v": 31
+            }
+          ]
+        },
+        "scarf1": {
+          "rotation": [
+            {
+              "t": 0.14,
+              "v": 102
+            },
+            {
+              "t": 0.34,
+              "v": 90
+            },
+            {
+              "t": 0.54,
+              "v": 102
+            },
+            {
+              "t": 0.74,
+              "v": 90
+            }
+          ]
+        },
+        "scarf2": {
+          "rotation": [
+            {
+              "t": 0.004,
+              "v": 30
+            },
+            {
+              "t": 0.204,
+              "v": 50
+            },
+            {
+              "t": 0.404,
+              "v": 30
+            },
+            {
+              "t": 0.604,
+              "v": 50
+            }
+          ]
+        },
+        "scarf3": {
+          "rotation": [
+            {
+              "t": 0.068,
+              "v": 6
+            },
+            {
+              "t": 0.268,
+              "v": 34
+            },
+            {
+              "t": 0.468,
+              "v": 6
+            },
+            {
+              "t": 0.668,
+              "v": 34
+            }
+          ]
+        },
+        "hoodTip1": {
+          "rotation": [
+            {
+              "t": 0.18,
+              "v": 50
+            },
+            {
+              "t": 0.38,
+              "v": 38
+            },
+            {
+              "t": 0.58,
+              "v": 50
+            },
+            {
+              "t": 0.78,
+              "v": 38
+            }
+          ]
+        },
+        "hoodTip2": {
+          "rotation": [
+            {
+              "t": 0.044,
+              "v": 16
+            },
+            {
+              "t": 0.244,
+              "v": 36
+            },
+            {
+              "t": 0.444,
+              "v": 16
+            },
+            {
+              "t": 0.644,
+              "v": 36
+            }
+          ]
+        }
+      }
+    },
+    "dash": {
+      "duration": 0.24,
+      "loop": true,
+      "bones": {
+        "hip": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": 48
+            }
+          ],
+          "y": [
+            {
+              "t": 0,
+              "v": 5
+            }
+          ],
+          "x": [
+            {
+              "t": 0,
+              "v": 1
+            }
+          ]
+        },
+        "torso": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": 12
+            }
+          ]
+        },
+        "head": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": -44
+            }
+          ]
+        },
+        "thighF": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": 26
+            }
+          ]
+        },
+        "shinF": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": 12
+            }
+          ]
+        },
+        "thighB": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": -8
+            }
+          ]
+        },
+        "shinB": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": 58
+            }
+          ]
+        },
+        "armF": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": -134
+            }
+          ]
+        },
+        "weapon": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": 112
+            }
+          ]
+        },
+        "armB": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": 20
+            }
+          ]
+        },
+        "cape1": {
+          "rotation": [
+            {
+              "t": 0.03,
+              "v": 28
+            },
+            {
+              "t": 0.09,
+              "v": 24
+            },
+            {
+              "t": 0.15,
+              "v": 28
+            },
+            {
+              "t": 0.21,
+              "v": 24
+            }
+          ]
+        },
+        "cape2": {
+          "rotation": [
+            {
+              "t": 0.052,
+              "v": 6
+            },
+            {
+              "t": 0.112,
+              "v": -2
+            },
+            {
+              "t": 0.172,
+              "v": 6
+            },
+            {
+              "t": 0.232,
+              "v": -2
+            }
+          ]
+        },
+        "cape3": {
+          "rotation": [
+            {
+              "t": 0.013,
+              "v": -8
+            },
+            {
+              "t": 0.073,
+              "v": 4
+            },
+            {
+              "t": 0.133,
+              "v": -8
+            },
+            {
+              "t": 0.193,
+              "v": 4
+            }
+          ]
+        },
+        "scarf1": {
+          "rotation": [
+            {
+              "t": 0.042,
+              "v": -21
+            },
+            {
+              "t": 0.102,
+              "v": -27
+            },
+            {
+              "t": 0.162,
+              "v": -21
+            },
+            {
+              "t": 0.222,
+              "v": -27
+            }
+          ]
+        },
+        "scarf2": {
+          "rotation": [
+            {
+              "t": 0.004,
+              "v": 24
+            },
+            {
+              "t": 0.064,
+              "v": 36
+            },
+            {
+              "t": 0.124,
+              "v": 24
+            },
+            {
+              "t": 0.184,
+              "v": 36
+            }
+          ]
+        },
+        "scarf3": {
+          "rotation": [
+            {
+              "t": 0.025,
+              "v": 11
+            },
+            {
+              "t": 0.085,
+              "v": 29
+            },
+            {
+              "t": 0.145,
+              "v": 11
+            },
+            {
+              "t": 0.205,
+              "v": 29
+            }
+          ]
+        },
+        "hoodTip1": {
+          "rotation": [
+            {
+              "t": 0.054,
+              "v": 9
+            },
+            {
+              "t": 0.114,
+              "v": 3
+            },
+            {
+              "t": 0.174,
+              "v": 9
+            },
+            {
+              "t": 0.234,
+              "v": 3
+            }
+          ]
+        },
+        "hoodTip2": {
+          "rotation": [
+            {
+              "t": 0.016,
+              "v": 30
+            },
+            {
+              "t": 0.076,
+              "v": 42
+            },
+            {
+              "t": 0.136,
+              "v": 30
+            },
+            {
+              "t": 0.196,
+              "v": 42
+            }
+          ]
+        }
+      },
+      "slots": {
+        "glow": {
+          "alpha": [
+            {
+              "t": 0,
+              "v": 0.9
+            }
+          ]
+        }
+      }
+    },
+    "attack": {
+      "duration": 0.3,
+      "loop": false,
+      "bones": {
+        "hip": {
+          "x": [
+            {
+              "t": 0,
+              "v": -1.5,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.05,
+              "v": -2.5,
+              "ease": "cubicIn"
+            },
+            {
+              "t": 0.11,
+              "v": 4,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.17,
+              "v": 4.5,
+              "ease": "sineInOut"
+            },
+            {
+              "t": 0.3,
+              "v": 0
+            }
+          ],
+          "y": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.05,
+              "v": 1.5,
+              "ease": "cubicIn"
+            },
+            {
+              "t": 0.11,
+              "v": 2.8,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.17,
+              "v": 2.4,
+              "ease": "sineInOut"
+            },
+            {
+              "t": 0.3,
+              "v": 0
+            }
+          ]
+        },
+        "thighF": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": -25.929,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.05,
+              "v": -32.591,
+              "ease": "cubicIn"
+            },
+            {
+              "t": 0.11,
+              "v": -37.414,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.17,
+              "v": -33.202,
+              "ease": "sineInOut"
+            },
+            {
+              "t": 0.3,
+              "v": -2.833
+            }
+          ]
+        },
+        "shinF": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": 33.426,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.05,
+              "v": 39.628,
+              "ease": "cubicIn"
+            },
+            {
+              "t": 0.11,
+              "v": 61.381,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.17,
+              "v": 56.941,
+              "ease": "sineInOut"
+            },
+            {
+              "t": 0.3,
+              "v": 5.151
+            }
+          ]
+        },
+        "thighB": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": -24.082,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.05,
+              "v": -31.049,
+              "ease": "cubicIn"
+            },
+            {
+              "t": 0.11,
+              "v": -18.125,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.17,
+              "v": -13.171,
+              "ease": "sineInOut"
+            },
+            {
+              "t": 0.3,
+              "v": -2.833
+            }
+          ]
+        },
+        "shinB": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": 35.473,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.05,
+              "v": 42.277,
+              "ease": "cubicIn"
+            },
+            {
+              "t": 0.11,
+              "v": 56.307,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.17,
+              "v": 49.721,
+              "ease": "sineInOut"
+            },
+            {
+              "t": 0.3,
+              "v": 5.151
+            }
+          ]
+        },
+        "armF": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": 58,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.05,
+              "v": 74,
+              "ease": "cubicIn"
+            },
+            {
+              "t": 0.11,
+              "v": -112,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.17,
+              "v": -128,
+              "ease": "sineInOut"
+            },
+            {
+              "t": 0.3,
+              "v": 0
+            }
+          ]
+        },
+        "weapon": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": 128,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.05,
+              "v": 136,
+              "ease": "cubicIn"
+            },
+            {
+              "t": 0.11,
+              "v": 112,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.17,
+              "v": 104,
+              "ease": "sineInOut"
+            },
+            {
+              "t": 0.3,
+              "v": 0
+            }
+          ]
+        },
+        "torso": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": 10,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.05,
+              "v": 14,
+              "ease": "cubicIn"
+            },
+            {
+              "t": 0.11,
+              "v": 4,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.17,
+              "v": -6,
+              "ease": "sineInOut"
+            },
+            {
+              "t": 0.3,
+              "v": 0
+            }
+          ]
+        },
+        "head": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": -6,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.05,
+              "v": -8,
+              "ease": "cubicIn"
+            },
+            {
+              "t": 0.11,
+              "v": -4,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.17,
+              "v": 2,
+              "ease": "sineInOut"
+            },
+            {
+              "t": 0.3,
+              "v": 0
+            }
+          ]
+        },
+        "armB": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": -34,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.05,
+              "v": -40,
+              "ease": "cubicIn"
+            },
+            {
+              "t": 0.11,
+              "v": 56,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.17,
+              "v": 62,
+              "ease": "sineInOut"
+            },
+            {
+              "t": 0.3,
+              "v": 0
+            }
+          ]
+        },
+        "cape1": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": -10
+            },
+            {
+              "t": 0.05,
+              "v": -14,
+              "ease": "cubicIn"
+            },
+            {
+              "t": 0.12,
+              "v": 26,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.2,
+              "v": -10
+            },
+            {
+              "t": 0.3,
+              "v": 0
+            }
+          ]
+        },
+        "cape2": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": -6
+            },
+            {
+              "t": 0.06,
+              "v": -10,
+              "ease": "cubicIn"
+            },
+            {
+              "t": 0.14,
+              "v": 18,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.22,
+              "v": -9
+            },
+            {
+              "t": 0.3,
+              "v": 0
+            }
+          ]
+        },
+        "cape3": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": -3
+            },
+            {
+              "t": 0.07,
+              "v": -8,
+              "ease": "cubicIn"
+            },
+            {
+              "t": 0.16,
+              "v": 14,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.24,
+              "v": -8
+            },
+            {
+              "t": 0.3,
+              "v": 0
+            }
+          ]
+        },
+        "scarf1": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": -14
+            },
+            {
+              "t": 0.05,
+              "v": -20,
+              "ease": "cubicIn"
+            },
+            {
+              "t": 0.12,
+              "v": 34,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.21,
+              "v": -14
+            },
+            {
+              "t": 0.3,
+              "v": 0
+            }
+          ]
+        },
+        "scarf2": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": -8
+            },
+            {
+              "t": 0.06,
+              "v": -14,
+              "ease": "cubicIn"
+            },
+            {
+              "t": 0.14,
+              "v": 26,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.23,
+              "v": -14
+            },
+            {
+              "t": 0.3,
+              "v": 0
+            }
+          ]
+        },
+        "scarf3": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": -4
+            },
+            {
+              "t": 0.07,
+              "v": -10,
+              "ease": "cubicIn"
+            },
+            {
+              "t": 0.16,
+              "v": 18,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.25,
+              "v": -10
+            },
+            {
+              "t": 0.3,
+              "v": 0
+            }
+          ]
+        },
+        "hoodTip1": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": -12
+            },
+            {
+              "t": 0.05,
+              "v": -18,
+              "ease": "cubicIn"
+            },
+            {
+              "t": 0.12,
+              "v": 26,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.21,
+              "v": -12
+            },
+            {
+              "t": 0.3,
+              "v": 0
+            }
+          ]
+        },
+        "hoodTip2": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": -8
+            },
+            {
+              "t": 0.06,
+              "v": -14,
+              "ease": "cubicIn"
+            },
+            {
+              "t": 0.14,
+              "v": 24,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.23,
+              "v": -12
+            },
+            {
+              "t": 0.3,
+              "v": 0
+            }
+          ]
+        },
+        "fx": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": 34,
+              "ease": "step"
+            },
+            {
+              "t": 0.075,
+              "v": 34,
+              "ease": "cubicOut"
+            },
+            {
+              "t": 0.21,
+              "v": -16
+            }
+          ],
+          "scaleX": [
+            {
+              "t": 0,
+              "v": 0.8,
+              "ease": "step"
+            },
+            {
+              "t": 0.075,
+              "v": 0.8,
+              "ease": "cubicOut"
+            },
+            {
+              "t": 0.21,
+              "v": 1.15
+            }
+          ],
+          "scaleY": [
+            {
+              "t": 0,
+              "v": 0.8,
+              "ease": "step"
+            },
+            {
+              "t": 0.075,
+              "v": 0.8,
+              "ease": "cubicOut"
+            },
+            {
+              "t": 0.21,
+              "v": 1.15
+            }
+          ]
+        }
+      },
+      "slots": {
+        "slash": {
+          "alpha": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "step"
+            },
+            {
+              "t": 0.075,
+              "v": 1,
+              "ease": "quadIn"
+            },
+            {
+              "t": 0.21,
+              "v": 0
+            }
+          ]
+        },
+        "glow": {
+          "alpha": [
+            {
+              "t": 0,
+              "v": 0.7
+            },
+            {
+              "t": 0.1,
+              "v": 1
+            },
+            {
+              "t": 0.3,
+              "v": 0.55
+            }
+          ]
+        }
+      },
+      "events": [
+        {
+          "t": 0.1,
+          "name": "hit"
+        }
+      ]
+    },
+    "turn": {
+      "duration": 0.12,
+      "loop": false,
+      "bones": {
+        "hip": {
+          "x": [
+            {
+              "t": 0,
+              "v": -3,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.12,
+              "v": 0
+            }
+          ],
+          "y": [
+            {
+              "t": 0,
+              "v": 2.5,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.12,
+              "v": 0
+            }
+          ]
+        },
+        "thighF": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": -38.598,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.12,
+              "v": -2.833
+            }
+          ]
+        },
+        "shinF": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": 20.674,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.12,
+              "v": 5.151
+            }
+          ]
+        },
+        "thighB": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": -38.047,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.12,
+              "v": -2.833
+            }
+          ]
+        },
+        "shinB": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": 56.858,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.12,
+              "v": 5.151
+            }
+          ]
+        },
+        "torso": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": -17,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.12,
+              "v": 0
+            }
+          ]
+        },
+        "head": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": 6,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.12,
+              "v": 0
+            }
+          ]
+        },
+        "armB": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": 48,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.12,
+              "v": 0
+            }
+          ]
+        },
+        "armF": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": -44,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.12,
+              "v": 0
+            }
+          ]
+        },
+        "weapon": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": 26,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.12,
+              "v": 0
+            }
+          ]
+        },
+        "cape1": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": -40,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.12,
+              "v": 0
+            }
+          ]
+        },
+        "cape2": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": -24,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.12,
+              "v": 0
+            }
+          ]
+        },
+        "cape3": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": -16,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.12,
+              "v": 0
+            }
+          ]
+        },
+        "scarf1": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": -56,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.12,
+              "v": 0
+            }
+          ]
+        },
+        "scarf2": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": -30,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.12,
+              "v": 0
+            }
+          ]
+        },
+        "scarf3": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": -20,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.12,
+              "v": 0
+            }
+          ]
+        },
+        "hoodTip1": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": -34,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.12,
+              "v": 0
+            }
+          ]
+        },
+        "hoodTip2": {
+          "rotation": [
+            {
+              "t": 0,
+              "v": -24,
+              "ease": "quadOut"
+            },
+            {
+              "t": 0.12,
+              "v": 0
+            }
+          ]
+        }
+      }
+    }
+  },
+  "mix": {
+    "default": 0.1,
+    "pairs": {
+      "idle>attack": 0.03,
+      "idle>dash": 0.04,
+      "idle>turn": 0.03,
+      "idle>jump": 0.06,
+      "idle>land": 0.04,
+      "idle>doubleJump": 0.05,
+      "idle>wallSlide": 0.08,
+      "run>attack": 0.03,
+      "run>dash": 0.04,
+      "run>turn": 0.03,
+      "run>jump": 0.06,
+      "run>land": 0.04,
+      "run>doubleJump": 0.05,
+      "run>wallSlide": 0.08,
+      "jump>attack": 0.03,
+      "jump>dash": 0.04,
+      "jump>turn": 0.03,
+      "jump>land": 0.04,
+      "jump>doubleJump": 0.05,
+      "jump>wallSlide": 0.08,
+      "fall>attack": 0.03,
+      "fall>dash": 0.04,
+      "fall>turn": 0.03,
+      "fall>jump": 0.06,
+      "fall>land": 0.04,
+      "fall>doubleJump": 0.05,
+      "fall>wallSlide": 0.08,
+      "land>attack": 0.03,
+      "land>dash": 0.04,
+      "land>turn": 0.03,
+      "land>jump": 0.06,
+      "land>doubleJump": 0.05,
+      "land>wallSlide": 0.08,
+      "doubleJump>attack": 0.03,
+      "doubleJump>dash": 0.04,
+      "doubleJump>turn": 0.03,
+      "doubleJump>jump": 0.06,
+      "doubleJump>land": 0.04,
+      "doubleJump>wallSlide": 0.08,
+      "wallSlide>attack": 0.03,
+      "wallSlide>dash": 0.04,
+      "wallSlide>turn": 0.03,
+      "wallSlide>jump": 0.06,
+      "wallSlide>land": 0.04,
+      "wallSlide>doubleJump": 0.05,
+      "dash>attack": 0.03,
+      "dash>turn": 0.03,
+      "dash>jump": 0.06,
+      "dash>land": 0.04,
+      "dash>doubleJump": 0.05,
+      "dash>wallSlide": 0.08,
+      "attack>dash": 0.04,
+      "attack>turn": 0.03,
+      "attack>jump": 0.06,
+      "attack>land": 0.04,
+      "attack>doubleJump": 0.05,
+      "attack>wallSlide": 0.08,
+      "turn>attack": 0.03,
+      "turn>dash": 0.04,
+      "turn>jump": 0.06,
+      "turn>land": 0.04,
+      "turn>doubleJump": 0.05,
+      "turn>wallSlide": 0.08,
+      "land>idle": 0.12,
+      "land>run": 0.08,
+      "turn>run": 0.08,
+      "attack>idle": 0.12,
+      "attack>run": 0.1,
+      "dash>run": 0.08,
+      "dash>fall": 0.1,
+      "jump>fall": 0.16,
+      "doubleJump>fall": 0.12,
+      "idle>run": 0.08,
+      "run>idle": 0.12
+    }
+  }
+}

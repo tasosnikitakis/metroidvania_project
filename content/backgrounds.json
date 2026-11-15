@@ -1,0 +1,131 @@
+{
+  "version": 1,
+  "backgrounds": [
+    {
+      "key": "castle-exterior-night",
+      "name": "Castle exterior (night)",
+      "skyTop": "#120f33",
+      "skyBottom": "#5a3f8f",
+      "layers": [
+        {
+          "image": "assets/bg/ext-sky.png",
+          "w": 1600,
+          "h": 520,
+          "imageScale": 2,
+          "scrollX": 0.02,
+          "scrollY": 0.02,
+          "repeatX": true,
+          "anchorY": "top",
+          "offsetY": 0
+        },
+        {
+          "image": "assets/bg/ext-far.png",
+          "w": 1280,
+          "h": 540,
+          "imageScale": 2,
+          "scrollX": 0.08,
+          "scrollY": 0.04,
+          "repeatX": true,
+          "anchorY": "bottom",
+          "offsetY": 0
+        },
+        {
+          "image": "assets/bg/ext-mid.png",
+          "w": 1400,
+          "h": 400,
+          "imageScale": 2,
+          "scrollX": 0.2,
+          "scrollY": 0.1,
+          "repeatX": true,
+          "anchorY": "bottom",
+          "offsetY": 0
+        },
+        {
+          "image": "assets/bg/ext-fog.png",
+          "w": 1024,
+          "h": 260,
+          "imageScale": 2,
+          "scrollX": 0.32,
+          "scrollY": 0.14,
+          "repeatX": true,
+          "anchorY": "bottom",
+          "offsetY": 0,
+          "alpha": 0.8
+        },
+        {
+          "image": "assets/bg/ext-near.png",
+          "w": 1500,
+          "h": 260,
+          "imageScale": 2,
+          "scrollX": 0.55,
+          "scrollY": 0.3,
+          "repeatX": true,
+          "anchorY": "bottom",
+          "offsetY": 0
+        }
+      ],
+      "ambient": "#c2c0f0",
+      "fog": {
+        "color": "#8f8fd8",
+        "alpha": 0.1
+      }
+    },
+    {
+      "key": "castle-interior",
+      "name": "Castle interior (great hall)",
+      "skyTop": "#0f0c26",
+      "skyBottom": "#221a47",
+      "layers": [
+        {
+          "image": "assets/bg/int-far.png",
+          "w": 1200,
+          "h": 760,
+          "imageScale": 2,
+          "scrollX": 0.06,
+          "scrollY": 0.03,
+          "repeatX": true,
+          "anchorY": "bottom",
+          "offsetY": 0
+        },
+        {
+          "image": "assets/bg/int-windows.png",
+          "w": 960,
+          "h": 680,
+          "imageScale": 2,
+          "scrollX": 0.14,
+          "scrollY": 0.06,
+          "repeatX": true,
+          "anchorY": "bottom",
+          "offsetY": 0
+        },
+        {
+          "image": "assets/bg/int-pillars.png",
+          "w": 800,
+          "h": 760,
+          "imageScale": 2,
+          "scrollX": 0.34,
+          "scrollY": 0.12,
+          "repeatX": true,
+          "anchorY": "bottom",
+          "offsetY": 0
+        },
+        {
+          "image": "assets/bg/int-near-top.png",
+          "w": 1100,
+          "h": 220,
+          "imageScale": 2,
+          "scrollX": 0.62,
+          "scrollY": 0.3,
+          "repeatX": true,
+          "anchorY": "top",
+          "offsetY": 0
+        }
+      ],
+      "ambient": "#cdbfe6",
+      "fog": {
+        "color": "#4a3a8a",
+        "alpha": 0.1
+      }
+    }
+  ]
+}

@@ -1,0 +1,485 @@
+{
+  "version": 1,
+  "image": "assets/tiles/tileset.png",
+  "tileSize": 48,
+  "imageScale": 2,
+  "columns": 16,
+  "tiles": [
+    {
+      "id": 1,
+      "name": "castle-stone-0",
+      "collision": "solid",
+      "group": "stone"
+    },
+    {
+      "id": 2,
+      "name": "castle-stone-1",
+      "collision": "solid",
+      "group": "stone"
+    },
+    {
+      "id": 3,
+      "name": "castle-stone-2",
+      "collision": "solid",
+      "group": "stone"
+    },
+    {
+      "id": 4,
+      "name": "castle-stone-3",
+      "collision": "solid",
+      "group": "stone"
+    },
+    {
+      "id": 5,
+      "name": "castle-stone-4",
+      "collision": "solid",
+      "group": "stone"
+    },
+    {
+      "id": 6,
+      "name": "castle-stone-5",
+      "collision": "solid",
+      "group": "stone"
+    },
+    {
+      "id": 7,
+      "name": "castle-stone-6",
+      "collision": "solid",
+      "group": "stone"
+    },
+    {
+      "id": 8,
+      "name": "castle-stone-7",
+      "collision": "solid",
+      "group": "stone"
+    },
+    {
+      "id": 9,
+      "name": "castle-stone-8",
+      "collision": "solid",
+      "group": "stone"
+    },
+    {
+      "id": 10,
+      "name": "castle-stone-9",
+      "collision": "solid",
+      "group": "stone"
+    },
+    {
+      "id": 11,
+      "name": "castle-stone-10",
+      "collision": "solid",
+      "group": "stone"
+    },
+    {
+      "id": 12,
+      "name": "castle-stone-11",
+      "collision": "solid",
+      "group": "stone"
+    },
+    {
+      "id": 13,
+      "name": "castle-stone-12",
+      "collision": "solid",
+      "group": "stone"
+    },
+    {
+      "id": 14,
+      "name": "castle-stone-13",
+      "collision": "solid",
+      "group": "stone"
+    },
+    {
+      "id": 15,
+      "name": "castle-stone-14",
+      "collision": "solid",
+      "group": "stone"
+    },
+    {
+      "id": 16,
+      "name": "castle-stone-15",
+      "collision": "solid",
+      "group": "stone"
+    },
+    {
+      "id": 17,
+      "name": "castle-wall-0",
+      "collision": "none",
+      "group": "wall"
+    },
+    {
+      "id": 18,
+      "name": "castle-wall-1",
+      "collision": "none",
+      "group": "wall"
+    },
+    {
+      "id": 19,
+      "name": "castle-wall-2",
+      "collision": "none",
+      "group": "wall"
+    },
+    {
+      "id": 20,
+      "name": "castle-wall-3",
+      "collision": "none",
+      "group": "wall"
+    },
+    {
+      "id": 21,
+      "name": "castle-wall-4",
+      "collision": "none",
+      "group": "wall"
+    },
+    {
+      "id": 22,
+      "name": "castle-wall-5",
+      "collision": "none",
+      "group": "wall"
+    },
+    {
+      "id": 23,
+      "name": "castle-wall-6",
+      "collision": "none",
+      "group": "wall"
+    },
+    {
+      "id": 24,
+      "name": "castle-wall-7",
+      "collision": "none",
+      "group": "wall"
+    },
+    {
+      "id": 25,
+      "name": "castle-wall-8",
+      "collision": "none",
+      "group": "wall"
+    },
+    {
+      "id": 26,
+      "name": "castle-wall-9",
+      "collision": "none",
+      "group": "wall"
+    },
+    {
+      "id": 27,
+      "name": "castle-wall-10",
+      "collision": "none",
+      "group": "wall"
+    },
+    {
+      "id": 28,
+      "name": "castle-wall-11",
+      "collision": "none",
+      "group": "wall"
+    },
+    {
+      "id": 29,
+      "name": "castle-wall-12",
+      "collision": "none",
+      "group": "wall"
+    },
+    {
+      "id": 30,
+      "name": "castle-wall-13",
+      "collision": "none",
+      "group": "wall"
+    },
+    {
+      "id": 31,
+      "name": "castle-wall-14",
+      "collision": "none",
+      "group": "wall"
+    },
+    {
+      "id": 32,
+      "name": "castle-wall-15",
+      "collision": "none",
+      "group": "wall"
+    },
+    {
+      "id": 33,
+      "name": "castle-stone-fill-crack",
+      "collision": "solid",
+      "group": "stone"
+    },
+    {
+      "id": 34,
+      "name": "castle-stone-fill-skull",
+      "collision": "solid",
+      "group": "stone"
+    },
+    {
+      "id": 35,
+      "name": "castle-stone-fill-rune",
+      "collision": "solid",
+      "group": "stone"
+    },
+    {
+      "id": 36,
+      "name": "castle-wall-fill-crack",
+      "collision": "none",
+      "group": "wall"
+    },
+    {
+      "id": 37,
+      "name": "castle-wall-fill-drain",
+      "collision": "none",
+      "group": "wall"
+    },
+    {
+      "id": 38,
+      "name": "castle-wall-fill-holes",
+      "collision": "none",
+      "group": "wall"
+    },
+    {
+      "id": 39,
+      "name": "plank-left",
+      "collision": "oneway",
+      "group": "platforms"
+    },
+    {
+      "id": 40,
+      "name": "plank-middle",
+      "collision": "oneway",
+      "group": "platforms"
+    },
+    {
+      "id": 41,
+      "name": "plank-right",
+      "collision": "oneway",
+      "group": "platforms"
+    },
+    {
+      "id": 42,
+      "name": "ledge-left",
+      "collision": "oneway",
+      "group": "platforms"
+    },
+    {
+      "id": 43,
+      "name": "ledge-middle",
+      "collision": "oneway",
+      "group": "platforms"
+    },
+    {
+      "id": 44,
+      "name": "ledge-right",
+      "collision": "oneway",
+      "group": "platforms"
+    },
+    {
+      "id": 45,
+      "name": "spikes-floor",
+      "collision": "hazard",
+      "group": "hazards"
+    },
+    {
+      "id": 46,
+      "name": "spikes-ceiling",
+      "collision": "hazard",
+      "group": "hazards"
+    },
+    {
+      "id": 47,
+      "name": "brambles",
+      "collision": "hazard",
+      "group": "hazards"
+    },
+    {
+      "id": 48,
+      "name": "spikes-wall-left",
+      "collision": "hazard",
+      "group": "hazards"
+    },
+    {
+      "id": 49,
+      "name": "pillar-top",
+      "collision": "solid",
+      "group": "ornaments"
+    },
+    {
+      "id": 50,
+      "name": "pillar-middle",
+      "collision": "solid",
+      "group": "ornaments"
+    },
+    {
+      "id": 51,
+      "name": "pillar-base",
+      "collision": "solid",
+      "group": "ornaments"
+    },
+    {
+      "id": 52,
+      "name": "block-moon",
+      "collision": "solid",
+      "group": "ornaments"
+    },
+    {
+      "id": 53,
+      "name": "block-rune",
+      "collision": "solid",
+      "group": "ornaments"
+    },
+    {
+      "id": 54,
+      "name": "block-plain",
+      "collision": "solid",
+      "group": "ornaments"
+    },
+    {
+      "id": 55,
+      "name": "window-top",
+      "collision": "none",
+      "group": "back-details"
+    },
+    {
+      "id": 56,
+      "name": "window-middle",
+      "collision": "none",
+      "group": "back-details"
+    },
+    {
+      "id": 57,
+      "name": "window-bottom",
+      "collision": "none",
+      "group": "back-details"
+    },
+    {
+      "id": 58,
+      "name": "banner-top",
+      "collision": "none",
+      "group": "back-details"
+    },
+    {
+      "id": 59,
+      "name": "banner-middle",
+      "collision": "none",
+      "group": "back-details"
+    },
+    {
+      "id": 60,
+      "name": "banner-bottom",
+      "collision": "none",
+      "group": "back-details"
+    },
+    {
+      "id": 61,
+      "name": "chain",
+      "collision": "none",
+      "group": "back-details"
+    },
+    {
+      "id": 62,
+      "name": "chain-end",
+      "collision": "none",
+      "group": "back-details"
+    },
+    {
+      "id": 63,
+      "name": "cobweb-left",
+      "collision": "none",
+      "group": "back-details"
+    },
+    {
+      "id": 64,
+      "name": "cobweb-right",
+      "collision": "none",
+      "group": "back-details"
+    },
+    {
+      "id": 65,
+      "name": "grass-tuft",
+      "collision": "none",
+      "group": "front-details"
+    },
+    {
+      "id": 66,
+      "name": "grass-flower",
+      "collision": "none",
+      "group": "front-details"
+    },
+    {
+      "id": 67,
+      "name": "ivy-hanging",
+      "collision": "none",
+      "group": "front-details"
+    },
+    {
+      "id": 68,
+      "name": "ivy-end",
+      "collision": "none",
+      "group": "front-details"
+    },
+    {
+      "id": 69,
+      "name": "rim-bottom",
+      "collision": "none",
+      "group": "front-details"
+    },
+    {
+      "id": 70,
+      "name": "rim-top",
+      "collision": "none",
+      "group": "front-details"
+    }
+  ],
+  "terrains": [
+    {
+      "name": "castle-stone",
+      "layer": "main",
+      "tiles": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "fillVariants": [
+        33,
+        34,
+        35
+      ]
+    },
+    {
+      "name": "castle-wall",
+      "layer": "back",
+      "tiles": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32
+      ],
+      "fillVariants": [
+        36,
+        37,
+        38
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "name": "Gothic Prototype",
+  "startRoom": "room-001",
+  "rooms": [
+    {
+      "id": "room-001",
+      "name": "Test Hall",
+      "x": 0,
+      "y": 0,
+      "w": 110,
+      "h": 34
+    }
+  ]
+}

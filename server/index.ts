@@ -103,10 +103,11 @@ app.delete('/api/content/*', async (req, reply) => {
 if (existsSync(DIST)) {
   await app.register(fastifyStatic, {
     root: DIST,
-    setHeaders(res, filePath) {
+    setHeaders(reply, filePath) {
       // Hashed build assets can be cached forever; everything else revalidates.
+      // (@fastify/static v10 passes the Fastify reply here, so it is .header(), not .setHeader().)
       const immutable = filePath.includes(`${path.sep}assets${path.sep}`) && /-[\w-]{8,}\.\w+$/.test(filePath);
-      res.setHeader('cache-control', immutable ? 'public, max-age=31536000, immutable' : 'no-cache');
+      reply.header('cache-control', immutable ? 'public, max-age=31536000, immutable' : 'no-cache');
     },
   });
 } else if (PROD) {
